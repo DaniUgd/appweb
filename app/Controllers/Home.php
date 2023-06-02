@@ -13,6 +13,6 @@ class Home extends BaseController{
     public function index(){
         // $data = $this->modelHome->usuario_list();
         // echo var_dump($data);
-        return view('home');
+        return view('register');
     }
 }

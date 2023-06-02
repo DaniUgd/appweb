@@ -1,3 +1,7 @@
+<script>
+    base_url = "<?php echo base_url();?>";
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +14,7 @@
     <link rel="icon" href="<?php echo BASEURL.'favicon.ico' ?>" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="<?php echo JS.'logic.js' ?>"></script>
 
 </head>
 <body>
@@ -23,7 +28,7 @@
 
     <section id="section_principal">
     <section id="section_datos">
-            <form id="form_reg" action="/formulario" method="POST">
+            <form id="form_reg" >
                 <h4>Datos de Inicio de Sesión</h4>
                 <div class="datos">
                     <div class="etiquetas">
@@ -110,7 +115,7 @@
                     </div>
                 </div>
                 <span id="ref" class="negrita">(*) Campos obligatorios</span>
-                <button type="submit" id="btn_crear" class="btn btn-primary"><span class="negrita">CREAR MI CUENTA</span></button>
+                <button type="button" id="btn_crear" class="btn btn-primary"><span class="negrita">CREAR MI CUENTA</span></button>
             </form>
         </section>
         <aside>

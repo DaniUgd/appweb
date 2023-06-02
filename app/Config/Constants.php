@@ -97,4 +97,5 @@ $baseURL = "http://".$_SERVER['HTTP_HOST'];
 $baseURL .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
 defined('BASEURL')      || define('BASEURL', $baseURL);
 defined('CSS')      || define('CSS', BASEURL.'css/');
+defined('JS')      || define('JS', BASEURL.'js/');
 defined('IMG')      || define('IMG', BASEURL.'img/');
