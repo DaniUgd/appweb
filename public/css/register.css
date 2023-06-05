@@ -72,6 +72,9 @@ nav a:hover{
 #estatura input{
     width: 86px;
 }
+.Error{
+    color: red;
+}
 
 footer{
     display: flex;

@@ -19,6 +19,7 @@
 </head>
 <body>
     <header>
+        <!-- <p><?php echo base_url();?></p> -->
         <h1>REGISTRO DE USUARIOS</h1>
     </header>
 
@@ -35,10 +36,12 @@
                         <label for="nombre_usu">Nombre de Usuario*</label>
                         <br>
                         <label for="email">E-mail*</label>
+                        <span id="email_error_1" class="Error"></span>
                         <br>
-                        <label for="pass">Contraseña*</label>
+                        <label id="lbPass" for="pass">Contraseña*</label>
                         <br>
-                        <label for="pass_rep">Repetir Contraseña*</label>
+                        <label id="lbRePass" for="pass_rep">Repetir Contraseña*</label>
+                        <!-- <span id="pass_error_1" class="Error"></span> -->
                     </div>
                     <div class="entradas">
                         <div class="tooltip">
@@ -47,19 +50,21 @@
                         </div>
                         <br>
                         <div class="tooltip">
-                            <input type="email" id="email" placeholder="Direccion@email.com" required>
+                            <input type="email" id="email" placeholder="Direccion@email.com" >
                             <span class="tooltiptext">Ingresar E-mail</span>
                         </div>
+                        <span id="email_error_2" class="Error"></span>
                         <br>
                         <div class="tooltip">
-                            <input type="password" id="pass" placeholder="Contraseña" required>
+                            <input type="password" id="pass" placeholder="Contraseña" >
                             <span class="tooltiptext">Ingresar Contraseña</span>
                         </div>
                         <br>
                         <div class="tooltip">
-                            <input type="password" id="pass_rep" placeholder="Contraseña" required>
+                            <input type="password" id="pass_rep" placeholder="Contraseña" >
                             <span class="tooltiptext">Ingresar Contraseña nuevamente</span>
                         </div>
+                        <!-- <span id="pass_error_2" class="Error"></span> -->
                     </div>
                 </div>
                 <h4>Datos Personales</h4>
@@ -117,6 +122,7 @@
                 <span id="ref" class="negrita">(*) Campos obligatorios</span>
                 <button type="button" id="btn_crear" class="btn btn-primary"><span class="negrita">CREAR MI CUENTA</span></button>
             </form>
+            <div id="resultado_consulta"></div>
         </section>
         <aside>
             <div id="aside_banner">

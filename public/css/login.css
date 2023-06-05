@@ -1,0 +1,105 @@
+header{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0;
+    align-items: center;
+}
+header div{
+    display: flex;
+    align-items: center;
+}
+header img{
+    height: 50px;
+}
+header h1{
+    font-size: 1.5em;
+}
+header a{
+    text-decoration: none;
+}
+header a:link{
+    color: black;
+}
+header a:visited{
+    color: black;
+}
+header a:hover{
+    color:darkred;
+}
+header a:active{
+    color: black;
+}
+
+.negrita{
+    font-weight: bold;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+nav a{
+    margin: 0px 10px;
+}
+nav a:hover{
+    color:red;
+}
+
+#img_cinema{
+    width: 330px;
+    height: 390px;
+}
+#section_principal{
+    display: flex;
+    justify-content: space-evenly;
+    /* margin: 10px 0; */
+    align-items: center;
+
+}
+
+#section_log_sign{
+    display: flex;
+    flex-direction: column;
+    /* gap: 0 25px; */
+}
+#form_log{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+#btn_ini_ses{
+    margin-top: 15px;
+}
+#sign_in{
+    display: flex;
+    justify-content: center;
+    border-top: 1px black solid;
+    padding-top: 25px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    /* position: relative;
+    bottom: 0;
+    text-align: center; */
+    margin: 50px 0;
+    background-color: black;
+}
+footer span{
+    color: white;
+}
+footer a{
+    margin: 0px 10px;
+}
+footer a:link{
+    color:white;
+}
+footer a:visited{
+    color: silver;
+}
+footer a:hover{
+    color: yellow;
+}

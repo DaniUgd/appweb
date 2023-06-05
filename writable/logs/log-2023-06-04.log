@@ -1,0 +1,396 @@
+CRITICAL - 2023-06-04 08:50:47 --> syntax error, unexpected variable "$query"
+in APPPATH\Models\HomeModel.php on line 35.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\HomeModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\HomeModel')
+ 4 SYSTEMPATH\Config\Factories.php(155): class_exists('App\\Models\\HomeModel')
+ 5 SYSTEMPATH\Config\Factories.php(125): CodeIgniter\Config\Factories::locateClass([...], 'HomeModel')
+ 6 SYSTEMPATH\Config\Factories.php(86): CodeIgniter\Config\Factories::__callStatic('models', [...])
+ 7 SYSTEMPATH\Common.php(829): CodeIgniter\Config\Factories::models('HomeModel', [...], null)
+ 8 APPPATH\Controllers\Home.php(10): model('HomeModel')
+ 9 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+10 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-04 08:50:51 --> syntax error, unexpected variable "$query"
+in APPPATH\Models\HomeModel.php on line 35.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\HomeModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\HomeModel')
+ 4 SYSTEMPATH\Config\Factories.php(155): class_exists('App\\Models\\HomeModel')
+ 5 SYSTEMPATH\Config\Factories.php(125): CodeIgniter\Config\Factories::locateClass([...], 'HomeModel')
+ 6 SYSTEMPATH\Config\Factories.php(86): CodeIgniter\Config\Factories::__callStatic('models', [...])
+ 7 SYSTEMPATH\Common.php(829): CodeIgniter\Config\Factories::models('HomeModel', [...], null)
+ 8 APPPATH\Controllers\Home.php(10): model('HomeModel')
+ 9 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+10 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-04 19:48:10 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1 in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USU...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USU...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USU...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USU...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 19:48:10 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 4 APPPATH\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 5 APPPATH\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-04 19:49:45 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1 in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USU...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USU...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USU...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USU...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 19:49:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 4 APPPATH\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 5 APPPATH\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-04 19:50:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1 in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USU...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USU...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USU...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USU...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 19:50:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 4 APPPATH\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 5 APPPATH\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-04 19:58:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1 in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USU...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USU...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USU...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USU...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 19:58:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 4 APPPATH\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 5 APPPATH\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-04 19:58:38 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1 in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USU...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USU...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USU...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USU...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 19:58:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 4 APPPATH\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 5 APPPATH\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-04 20:00:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1 in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USU...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USU...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USU...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USU...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 20:00:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 4 APPPATH\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 5 APPPATH\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-04 20:04:28 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1 in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USU...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USU...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USU...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USU...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 20:04:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 4 APPPATH\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 5 APPPATH\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-04 20:06:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1 in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USU...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USU...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USU...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USU...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 20:06:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 4 APPPATH\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 5 APPPATH\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-04 20:25:18 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1 in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USU...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USU...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USU...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USU...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 20:25:18 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 4 APPPATH\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 5 APPPATH\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-04 20:31:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1 in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USU...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USU...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USU...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USU...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 20:31:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 4 APPPATH\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 5 APPPATH\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-04 20:48:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1 in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USU...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USU...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USU...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USU...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 20:48:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 4 APPPATH\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 5 APPPATH\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-04 21:00:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1 in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USU...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USU...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USU...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USU...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 21:00:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 4 APPPATH\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 5 APPPATH\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-04 21:15:33 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1 in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USU...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USU...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USU...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USU...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 21:15:33 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 4 APPPATH\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 5 APPPATH\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-04 21:17:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1 in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USU...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USU...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USU...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USU...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 21:17:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' , , , , 1, , )' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 4 APPPATH\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO USUARIO VALUES (prueba2, , , , , , 1, , );')
+ 5 APPPATH\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-04 21:23:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1', '', '')' at line 1 in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 21:23:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1', '', '')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`) VALUES (\'prueba2\', \'\', \'\', \'\', \'\', \', \'1\', \'\', \'\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`) VALUES (\'prueba2\', \'\', \'\', \'\', \'\', \', \'1\', \'\', \'\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`) VALUES (\'prueba2\', \'\', \'\', \'\', \'\', \', \'1\', \'\', \'\');')
+ 4 APPPATH\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`) VALUES (\'prueba2\', \'\', \'\', \'\', \'\', \', \'1\', \'\', \'\');')
+ 5 APPPATH\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba2', '', '', '', '', '', '1', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-04 21:30:05 --> mysqli_sql_exception: Duplicate entry 'lurikoan@hotmail.com' for key 'Email' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba4', 'lurikoan@hotmai...', 'hola', 'Jorge', 'Perez', 'Madrid 123', '1', '4646545646', '1961-10-08')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 21:30:05 --> Duplicate entry 'lurikoan@hotmail.com' for key 'Email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`) VALUES (\'prueba4\', \'lurikoan@hotmail.com\', \'hola\', \'Jorge\', \'Perez\', \'Madrid 123\', \'1\', \'4646545646\', \'1961-10-08\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`) VALUES (\'prueba4\', \'lurikoan@hotmail.com\', \'hola\', \'Jorge\', \'Perez\', \'Madrid 123\', \'1\', \'4646545646\', \'1961-10-08\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`) VALUES (\'prueba4\', \'lurikoan@hotmail.com\', \'hola\', \'Jorge\', \'Perez\', \'Madrid 123\', \'1\', \'4646545646\', \'1961-10-08\');')
+ 4 APPPATH\Models\HomeModel.php(35): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`) VALUES (\'prueba4\', \'lurikoan@hotmail.com\', \'hola\', \'Jorge\', \'Perez\', \'Madrid 123\', \'1\', \'4646545646\', \'1961-10-08\');')
+ 5 APPPATH\Controllers\Home.php(37): App\Models\HomeModel->registrar_usuario('prueba4', 'lurikoan@hotmail.com', 'hola', 'Jorge', 'Perez', 'Madrid 123', '1', '4646545646', '1961-10-08')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
