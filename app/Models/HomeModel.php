@@ -19,7 +19,7 @@ class HomeModel extends Model{
     }
 
     public function get_email($email){
-        console.log($email);
+        // console.log($email);
         $sql = "SELECT * FROM `usuario` WHERE Email='$email';";    //se crea la consulta
         $query = $this->db->query($sql);    //se consulta a la db
         $result = $query->getResult();      //obtiene la consulta
@@ -33,7 +33,7 @@ class HomeModel extends Model{
 
     public function registrar_usuario($usuario, $email, $contrasena, $nombre, $apellido, $direccion, $genero, $telefono, $nacimiento){
         $contrasena = password_hash($contrasena, PASSWORD_DEFAULT);
-        console.log(strlen($contrasena));
+        // console.log(strlen($contrasena));
         $sql = "INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`) VALUES ('$usuario', '$email', '$contrasena', '$nombre', '$apellido', '$direccion', '$genero', '$telefono', '$nacimiento');";
         $query = $this->db->query($sql);
     }

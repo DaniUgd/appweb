@@ -2,8 +2,9 @@ $(document).ready(function(){
 
     console.log("Dentro");
 
+    //Control registro usuario (no existencia del correo en base)
     $("#btn_crear").click(function(){
-        console.log("Variables");
+        console.log("VariablesNuevo");
         let ing_usu = $("#nombre_usu").val();
         let ing_email = $("#email").val();
         let ing_pass = $("#pass").val();
@@ -12,23 +13,24 @@ $(document).ready(function(){
         let ing_ape = $("#apellido").val();
         let ing_dir = $("#direccion").val();
         let ing_gen;
-        let ing_gen_m = $("#gen_masculino").val();
-        let ing_gen_f = $("#gen_femenino").val();
+        if($("#gen_masculino").val()){
+            ing_gen = 1;
+        }else if($("#gen_femenino").val()){
+            ing_gen = 0;
+        }
+        console.log(ing_usu);
         let ing_tel = $("#telefono").val();
         let ing_nac = $("#nacimiento").val();
+        console.log(ing_pass);
+        console.log("Antes Comparacion");
 
         if(ing_pass == ing_repass){
             console.log("Contraseñas iguales");
             $("#lbPass").css("color","black");
             $("#lbRePass").css("color","black");
 
-            if(ing_gen_m){
-                ing_gen = 1;
-            }else if(ing_gen_f){
-                ing_gen = 0;
-            }
+            
             console.log("Antes Ajax");
-            console.log(base_url);
             $.ajax({
                 type: 'POST',
                 url: base_url + 'home/insert_usuario',
@@ -59,6 +61,7 @@ $(document).ready(function(){
 
     });
 
+    //Control existencia email cuando se completa el campo
     let timer;
     $("#email").on("input",function(){
         clearTimeout(timer);

@@ -15,6 +15,7 @@
 <body>
     <header>
         <div>
+            <p><?php echo base_url();?></p>
             <a href="">
                 <img src="img/playicon.png" alt="Imagen título: logo play">
             </a>
@@ -26,7 +27,7 @@
     </header>
 
     <nav>
-        <a href="">Crear una Cuenta</a>
+        <a href="<?php echo BASEURL.'register'?>">Crear una Cuenta</a>
         <span> | </span>
         <a href="">Olvide mi contraseña</a>
         <span> | </span>
@@ -45,7 +46,7 @@
             <button id="btn_ini_ses" onclick=send_data()>INICIAR SESIÓN</button>
             <!-- </form> -->
             <div id="sign_in">
-                <a href="">
+                <a href="<?php echo BASEURL.'register'?>">
                     <button>CREAR UNA CUENTA</button>
                 </a>
             </div>
@@ -54,11 +55,11 @@
     </section>
 
     <footer>
-        <a href="" target="_blank">Trakt API</a>
+        <a href="https://trakt.docs.apiary.io/" target="_blank">Trakt API</a>
         <span> - </span>
-        <a href="" target="_blank">U.G.D.</a>
+        <a href="https://ugd.edu.ar/" target="_blank">U.G.D.</a>
         <span> - </span>
-        <a href="" target="_blank">Campus Virtual</a>
+        <a href="https://campusvirtual.ugd.edu.ar/" target="_blank">Campus Virtual</a>
     </footer>
 </body>
 </html>

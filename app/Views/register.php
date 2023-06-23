@@ -24,7 +24,7 @@
     </header>
 
     <nav>
-        <a href="index.html">Iniciar Sesión</a>
+        <a href="<?php echo BASEURL ?>">Iniciar Sesión</a>
     </nav>
 
     <section id="section_principal">
@@ -41,7 +41,7 @@
                         <label id="lbPass" for="pass">Contraseña*</label>
                         <br>
                         <label id="lbRePass" for="pass_rep">Repetir Contraseña*</label>
-                        <!-- <span id="pass_error_1" class="Error"></span> -->
+                        <span id="pass_error_1" class="Error"></span>
                     </div>
                     <div class="entradas">
                         <div class="tooltip">
@@ -64,7 +64,7 @@
                             <input type="password" id="pass_rep" placeholder="Contraseña" >
                             <span class="tooltiptext">Ingresar Contraseña nuevamente</span>
                         </div>
-                        <!-- <span id="pass_error_2" class="Error"></span> -->
+                        <span id="pass_error_2" class="Error"></span>
                     </div>
                 </div>
                 <h4>Datos Personales</h4>
