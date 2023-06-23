@@ -1,10 +1,10 @@
 $(document).ready(function(){
 
-    console.log("Dentro");
+    let valid_email = true;
 
     //Control registro usuario (no existencia del correo en base)
     $("#btn_crear").click(function(){
-        console.log("VariablesNuevo");
+        console.log("VariablesNuevo1");
         let ing_usu = $("#nombre_usu").val();
         let ing_email = $("#email").val();
         let ing_pass = $("#pass").val();
@@ -18,17 +18,19 @@ $(document).ready(function(){
         }else if($("#gen_femenino").val()){
             ing_gen = 0;
         }
-        console.log(ing_usu);
         let ing_tel = $("#telefono").val();
         let ing_nac = $("#nacimiento").val();
-        console.log(ing_pass);
-        console.log("Antes Comparacion");
 
-        if(ing_pass == ing_repass){
+        if(ing_pass == ing_repass && valid_email){
             console.log("Contraseñas iguales");
             $("#lbPass").css("color","black");
             $("#lbRePass").css("color","black");
+            $("#pass_error_1").text("");
+            $("#pass_error_2").text("");
 
+            //Obtener token para confirmacion de email
+            let ing_token = generateToken(32);
+            console.log(ing_token);
             
             console.log("Antes Ajax");
             $.ajax({
@@ -39,17 +41,22 @@ $(document).ready(function(){
                     usuario: ing_usu,
                     email: ing_email,
                     contrasena: ing_pass,
+                    re_contrasena: ing_repass,
                     nombre: ing_nom,
                     apellido: ing_ape,
                     direccion: ing_dir,
                     genero: ing_gen,
                     telefono: ing_tel,
-                    nacimiento: ing_nac
+                    nacimiento: ing_nac,
+                    token: ing_token
                 },
                 success: function(dato){
-                    console.log(dato);
-                    // let resultado = JSON.stringify(dato);
-                    // $("#resultado_consulta").text(resultado);
+                    if(dato){
+                        console.log(dato);
+                        window.location.href = base_url;
+                    }else{
+                        //INFORMAR ERROR
+                    }
                 }
             })
 
@@ -57,6 +64,8 @@ $(document).ready(function(){
             console.log("Error: Contraseñas distintas");
             $("#lbPass").css("color","red");
             $("#lbRePass").css("color","red");
+            $("#pass_error_1").text("ERROR:");
+            $("#pass_error_2").text("Contraseñas ingresadas distintas.");
         }
 
     });
@@ -80,9 +89,11 @@ $(document).ready(function(){
                     if(dato){
                         $("#email_error_1").text("ERROR:");
                         $("#email_error_2").text("Ya está registrado el email ingresado.");
+                        valid_email = false;
                     }else{
                         $("#email_error_1").text("");
                         $("#email_error_2").text("");
+                        valid_email = true;
                     }
                 }
             })
@@ -90,3 +101,12 @@ $(document).ready(function(){
     });
 
 });
+
+function generateToken(length) {
+    var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    var token = '';
+    for (var i = 0; i < length; i++) {
+      token += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return token;
+}

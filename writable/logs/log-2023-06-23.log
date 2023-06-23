@@ -1,0 +1,137 @@
+INFO - 2023-06-23 03:22:24 --> Entro
+INFO - 2023-06-23 03:24:14 --> Entro
+INFO - 2023-06-23 03:26:48 --> Entro
+INFO - 2023-06-23 03:26:48 --> 1
+INFO - 2023-06-23 03:29:11 --> Entro
+INFO - 2023-06-23 03:29:11 --> 1
+INFO - 2023-06-23 03:29:11 --> entra2
+INFO - 2023-06-23 03:32:24 --> Entro
+INFO - 2023-06-23 03:36:51 --> Entro
+INFO - 2023-06-23 07:59:52 --> Entro
+CRITICAL - 2023-06-23 08:46:05 --> Call to a member function generateToken() on null
+in APPPATH\Models\HomeModel.php on line 40.
+ 1 APPPATH\Controllers\Home.php(57): App\Models\HomeModel->registrar_usuario('usu2', 'prueba2@correo.com', '$2y$10$PRqKpE8vgL.YkwztGHKDquvVC74snPdUK0aSkBbyyeAvRynBAtN5S', 'safsa', 'sdfsd', 'sdfds', '1', '2332324', '2023-06-06')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-23 19:34:54 --> Call to a member function generateToken() on null
+in APPPATH\Models\HomeModel.php on line 40.
+ 1 APPPATH\Controllers\Home.php(57): App\Models\HomeModel->registrar_usuario('aaaaa', 'lurikoan@gmail.com', '$2y$10$7nV4/ervkHq/Mm3.XAB96.pMA2MX9eW6vWo8tfTc9miLY3ayWM63y', 'sff', 'sdfsdf', 'sdfsd', '1', '3243243', '2023-06-06')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-23 19:38:37 --> Call to a member function generateToken() on null
+in APPPATH\Models\HomeModel.php on line 41.
+ 1 APPPATH\Controllers\Home.php(57): App\Models\HomeModel->registrar_usuario('aaaaa', 'lurikoan@gmail.com', '$2y$10$1vRS1AcjuLvSh9/eqKLRJ.QqSg6DDMc13Ra8Yd13t9GaqgrEq2fbC', 'Mirko', 'Czajkowski', 'Uruguay 256', '1', '32423432', '2023-06-02')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-23 19:58:51 --> EntroN
+INFO - 2023-06-23 21:12:42 --> EntroN
+ERROR - 2023-06-23 21:12:46 --> Email: sendWithSmtp throwed ErrorException: stream_socket_enable_crypto(): SSL operation failed with code 1. OpenSSL Error messages:
+error:0A000086:SSL routines::certificate verify failed in D:\xampp\htdocs\appweb\system\Email\Email.php:1883
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'stream_socket_e...', 'D:\\xampp\\htdocs...', 1883)
+#1 D:\xampp\htdocs\appweb\system\Email\Email.php(1883): stream_socket_enable_crypto(Resource id #146, true, 121)
+#2 D:\xampp\htdocs\appweb\system\Email\Email.php(1782): CodeIgniter\Email\Email->SMTPConnect()
+#3 D:\xampp\htdocs\appweb\system\Email\Email.php(1667): CodeIgniter\Email\Email->sendWithSmtp()
+#4 D:\xampp\htdocs\appweb\system\Email\Email.php(1565): CodeIgniter\Email\Email->spoolEmail()
+#5 D:\xampp\htdocs\appweb\app\Models\HomeModel.php(66): CodeIgniter\Email\Email->send()
+#6 D:\xampp\htdocs\appweb\app\Controllers\Home.php(62): App\Models\HomeModel->correo_confirmacion('pruebafacultadu...', 'Mirko', 'Czajkowski', '65n1yzpDae3WnyD...')
+#7 D:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 D:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2023-06-23 21:12:46 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-06-23 21:12:46 --> 220 smtp.googlemail.com ESMTP bs18-20020a056820179200b0055a0166070asm120848oob.30 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [152.169.219.98]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+INFO - 2023-06-23 21:20:55 --> EntroN
+ERROR - 2023-06-23 21:20:57 --> Email: sendWithSmtp throwed ErrorException: stream_socket_enable_crypto(): SSL operation failed with code 1. OpenSSL Error messages:
+error:0A000086:SSL routines::certificate verify failed in D:\xampp\htdocs\appweb\system\Email\Email.php:1883
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'stream_socket_e...', 'D:\\xampp\\htdocs...', 1883)
+#1 D:\xampp\htdocs\appweb\system\Email\Email.php(1883): stream_socket_enable_crypto(Resource id #146, true, 121)
+#2 D:\xampp\htdocs\appweb\system\Email\Email.php(1782): CodeIgniter\Email\Email->SMTPConnect()
+#3 D:\xampp\htdocs\appweb\system\Email\Email.php(1667): CodeIgniter\Email\Email->sendWithSmtp()
+#4 D:\xampp\htdocs\appweb\system\Email\Email.php(1565): CodeIgniter\Email\Email->spoolEmail()
+#5 D:\xampp\htdocs\appweb\app\Models\HomeModel.php(66): CodeIgniter\Email\Email->send()
+#6 D:\xampp\htdocs\appweb\app\Controllers\Home.php(62): App\Models\HomeModel->correo_confirmacion('pruebafacultadu...', 'Mirko', 'Czajkowski', 'Zi4AAlaJiZBOVeT...')
+#7 D:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 D:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2023-06-23 21:20:57 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-06-23 21:20:57 --> 220 smtp.googlemail.com ESMTP bh32-20020a056808182000b0039c76ff8c2bsm46105oib.47 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [152.169.219.98]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+INFO - 2023-06-23 21:27:37 --> EntroN
+ERROR - 2023-06-23 21:27:39 --> Email: sendWithSmtp throwed ErrorException: stream_socket_enable_crypto(): SSL operation failed with code 1. OpenSSL Error messages:
+error:0A000086:SSL routines::certificate verify failed in D:\xampp\htdocs\appweb\system\Email\Email.php:1883
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'stream_socket_e...', 'D:\\xampp\\htdocs...', 1883)
+#1 D:\xampp\htdocs\appweb\system\Email\Email.php(1883): stream_socket_enable_crypto(Resource id #146, true, 121)
+#2 D:\xampp\htdocs\appweb\system\Email\Email.php(1782): CodeIgniter\Email\Email->SMTPConnect()
+#3 D:\xampp\htdocs\appweb\system\Email\Email.php(1667): CodeIgniter\Email\Email->sendWithSmtp()
+#4 D:\xampp\htdocs\appweb\system\Email\Email.php(1565): CodeIgniter\Email\Email->spoolEmail()
+#5 D:\xampp\htdocs\appweb\app\Models\HomeModel.php(66): CodeIgniter\Email\Email->send()
+#6 D:\xampp\htdocs\appweb\app\Controllers\Home.php(62): App\Models\HomeModel->correo_confirmacion('pruebafacultadu...', 'Mirko', 'Czajkowski', '7g4SLtzkRQfCoVM...')
+#7 D:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 D:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2023-06-23 21:27:39 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-06-23 21:27:39 --> 220 smtp.googlemail.com ESMTP ld17-20020a0568702b1100b001a66847f5e4sm314661oab.19 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [152.169.219.98]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+INFO - 2023-06-23 21:50:44 --> EntroN
+ERROR - 2023-06-23 21:50:45 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:
+error:0A000086:SSL routines::certificate verify failed in D:\xampp\htdocs\appweb\system\Email\Email.php:1863
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): SS...', 'D:\\xampp\\htdocs...', 1863)
+#1 D:\xampp\htdocs\appweb\system\Email\Email.php(1863): fsockopen('tls://smtp.gmai...', 465, NULL, NULL, 60)
+#2 D:\xampp\htdocs\appweb\system\Email\Email.php(1782): CodeIgniter\Email\Email->SMTPConnect()
+#3 D:\xampp\htdocs\appweb\system\Email\Email.php(1667): CodeIgniter\Email\Email->sendWithSmtp()
+#4 D:\xampp\htdocs\appweb\system\Email\Email.php(1565): CodeIgniter\Email\Email->spoolEmail()
+#5 D:\xampp\htdocs\appweb\app\Models\HomeModel.php(66): CodeIgniter\Email\Email->send()
+#6 D:\xampp\htdocs\appweb\app\Controllers\Home.php(62): App\Models\HomeModel->correo_confirmacion('pruebafacultadu...', 'Mirko', 'Czajkowski', 'N3AbjIbRnPV1wjo...')
+#7 D:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 D:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2023-06-23 21:50:45 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-06-23 21:50:45 --> 

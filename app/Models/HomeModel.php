@@ -31,11 +31,43 @@ class HomeModel extends Model{
         }
     }
 
-    public function registrar_usuario($usuario, $email, $contrasena, $nombre, $apellido, $direccion, $genero, $telefono, $nacimiento){
+    public function registrar_usuario($usuario, $email, $contrasena, $nombre, $apellido, $direccion, $genero, $telefono, $nacimiento, $token){
+        
+        //Hash para la contraseña
         $contrasena = password_hash($contrasena, PASSWORD_DEFAULT);
-        // console.log(strlen($contrasena));
-        $sql = "INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`) VALUES ('$usuario', '$email', '$contrasena', '$nombre', '$apellido', '$direccion', '$genero', '$telefono', '$nacimiento');";
+        //Obtener la fecha de generacion de cuenta
+        $currentDate = date('Y-m-d');
+        
+        $sql = "INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES ('$usuario', '$email', '$contrasena', '$nombre', '$apellido', '$direccion', '$genero', '$telefono', '$nacimiento', 0, '$token', '$currentDate');";
         $query = $this->db->query($sql);
+        
+        if($query){
+            log_message("info","EntroN");
+            return TRUE;
+        }else{
+            log_message("info","No Entro");
+            return FALSE;
+        }
+    }
+
+    public function correo_confirmacion($email, $nombre, $apellido, $token){
+        
+        $enlace = BASEURL.'/email/validar_cuenta/'.$token;
+        $subject = "VideoTrends - Correo Confirmación de Registro de Cuenta";
+        $message = "¡Hola $nombre $apellido!\nPara activar tu cuenta sigue el siguiente enlace $enlace ";
+
+        $send = \Config\Services::email();
+
+        $send->setTo($email);
+        $send->setFrom('lurikoan@gmail.com','VideoTrends');
+        $send->setSubject($subject);
+        $send->setMessage($message);
+
+        if($send->send()){
+            return TRUE;
+        }else{
+            return FALSE;
+        }
     }
 
     // public function get_usuario($usuario){

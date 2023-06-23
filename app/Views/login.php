@@ -15,7 +15,7 @@
 <body>
     <header>
         <div>
-            <p><?php echo base_url();?></p>
+            <!-- <p><?php echo base_url();?></p> -->
             <a href="">
                 <img src="img/playicon.png" alt="Imagen título: logo play">
             </a>
