@@ -100,6 +100,34 @@ $(document).ready(function(){
         }, 500);
     });
 
+
+    //INICIO DE SESIÓN
+    $("#btn_ini_ses").click(function(){
+        console.log("Inicio_Ses");
+        let ses_email = $("#email_login").val();
+        let ses_pass = $("#pass_login").val();
+        console.log("Hola3");
+
+        $.ajax({
+            type: 'POST',
+            url: base_url + 'home/iniciar_sesion',
+            dataType: 'json',
+            data:{
+                email: ses_email,
+                contrasena: ses_pass
+            },
+            success: function(dato){
+                // if(dato){
+                //     console.log(dato);
+                //     window.location.href = base_url;
+                // }else{
+                //     //INFORMAR ERROR
+                // }
+            }
+        })
+    });
+
+
 });
 
 function generateToken(length) {

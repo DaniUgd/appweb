@@ -11,6 +11,7 @@
     <script src="<?php echo JS.'login.js' ?>"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo CSS.'login.css' ?>">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="<?php echo JS.'logic.js' ?>"></script>
 </head>
 <body>
     <header>
@@ -38,13 +39,11 @@
         <img id="img_cinema" src="img/cinema.png" alt="Imagen cinema">
 
         <section id="section_log_sign">
-            <!-- <form id="form_log" method="POST"> -->
-            <input type="email" id="email" name="email" placeholder="Direccion@email.com">
+            <input type="email" id="email_login" name="email" placeholder="Direccion@email.com">
             <label for="email">E-mail</label>
-            <input type="password" id="pass" name="pass" placeholder="Contraseña">
+            <input type="password" id="pass_login" name="pass" placeholder="Contraseña">
             <label for="pass">Contraseña</label>
-            <button id="btn_ini_ses" onclick=send_data()>INICIAR SESIÓN</button>
-            <!-- </form> -->
+            <button type="button" id="btn_ini_ses">INICIAR SESIÓN</button>
             <div id="sign_in">
                 <a href="<?php echo BASEURL.'register'?>">
                     <button>CREAR UNA CUENTA</button>

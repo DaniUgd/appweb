@@ -19,10 +19,9 @@ class HomeModel extends Model{
     }
 
     public function get_email($email){
-        // console.log($email);
-        $sql = "SELECT * FROM `usuario` WHERE Email='$email';";    //se crea la consulta
-        $query = $this->db->query($sql);    //se consulta a la db
-        $result = $query->getResult();      //obtiene la consulta
+        $sql = "SELECT * FROM `usuario` WHERE Email='$email';";
+        $query = $this->db->query($sql);
+        $result = $query->getResult();
 
         if(count($result)>=1){
             return TRUE;
@@ -50,26 +49,6 @@ class HomeModel extends Model{
         }
     }
 
-    public function correo_confirmacion($email, $nombre, $apellido, $token){
-        
-        $enlace = BASEURL.'/email/validar_cuenta/'.$token;
-        $subject = "VideoTrends - Correo Confirmación de Registro de Cuenta";
-        $message = "¡Hola $nombre $apellido!\nPara activar tu cuenta sigue el siguiente enlace $enlace ";
-
-        $send = \Config\Services::email();
-
-        $send->setTo($email);
-        $send->setFrom('lurikoan@gmail.com','VideoTrends');
-        $send->setSubject($subject);
-        $send->setMessage($message);
-
-        if($send->send()){
-            return TRUE;
-        }else{
-            return FALSE;
-        }
-    }
-
     // public function get_usuario($usuario){
     //     $sql = "SELECT * FROM USUARIO WHERE Usuario='$usuario';";    //se crea la consulta
     //     $query = $this->db->query($sql);    //se consulta a la db
@@ -81,5 +60,47 @@ class HomeModel extends Model{
     //         return NULL;
     //     }
     // }
+
+    //Verificar token de validacion de correo
+    public function verificar_token($token,$email){
+        $sql = "SELECT * FROM `usuario` WHERE Token='$token' AND Email='$email';";
+        $query = $this->db->query($sql);
+        $result = $query->getResult();
+
+        if(count($result)>=1){
+            return TRUE;
+        }else{
+            return FALSE;
+        }
+    }
+
+    //Actualizar como valido un correo confirmado
+    public function actualizar_valido($email){
+        $sql = "UPDATE `usuario` SET Valido=1 WHERE Email='$email';";
+        $query = $this->db->query($sql);
+        
+        if($query){
+            return TRUE;
+        }else{
+            return FALSE;
+        }
+    }
+
+    //Validar inicio de sesion
+    public function validar_inicio($email, $contrasena){
+        $sql_hash = "SELECT Contrasena FROM `usuario` WHERE Email='$email';"; //Posible error al tratar el dato
+        $query = $this->db->query($sql_hash);
+        if($query){
+            $hash = $query->getRow();
+            echo "<script>console.log($hash);</script>";
+            // if(password_verify($contrasena,$hash)){
+
+            // }
+        }else{
+            //ERROR: no existe correo ingresado
+        }
+
+        return TRUE;
+    }
 
 }

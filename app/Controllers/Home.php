@@ -11,21 +11,12 @@ class Home extends BaseController{
     }
 
     public function index(){
-        // $data = $this->modelHome->usuario_list();
-        // echo var_dump($data);
         return view('login');
     }
 
     public function register(){
         return view('register');
     }
-
-    // public function test(){
-        // $resultado = trim($this->request->getPost('usuario'));
-    //     $data = $this->modelHome->get_usuario($resultado);
-
-    //     return json_encode($data);
-    // }
 
     public function insert_usuario(){
         $usuario = $this->request->getPost('usuario');
@@ -59,7 +50,7 @@ class Home extends BaseController{
             
             if($result){
                 //Enviar correo de confirmación
-                $correo = $this->modelHome->correo_confirmacion($email, $nombre, $apellido, $token);
+                $correo = $this->enviar_confirmacion($email, $nombre, $apellido, $token);
             }
 
             return json_encode($result && $correo);
@@ -75,4 +66,62 @@ class Home extends BaseController{
 
         return json_encode($data);
     }
+
+    public function enviar_confirmacion($email, $nombre, $apellido, $token){
+        $emailConfig = [
+            'protocol' => 'smtp',
+            'SMTPHost' => 'sandbox.smtp.mailtrap.io',
+            'SMTPPort' => 2525,
+            'SMTPUser' => '03525d321d5cf5',
+            'SMTPPass' => '7f75c634acf5b5',
+            'mailType' => 'html',
+            'charset' => 'UTF-8',
+            'SMTPCrypto' => '',
+            'wordWrap' => true,
+            'newline' => "\r\n"
+        ];
+        
+        $emailSend = \Config\Services::email($emailConfig);
+        
+        $emailSend->setFrom('lurikoan@gmail.com', 'VideoTrends');
+        $emailSend->setTo($email);
+        
+        $emailSend->setSubject('VideoTrends - Correo Confirmación de Registro de Cuenta');
+        
+        $dataView = [
+            "linkValidCuenta" => "".BASEURL."home/confirmar_mail?tokenAuth=".$token."&email=".$email,
+            "Nombre" => $nombre,
+            "Apellido" => $apellido
+        ];
+        
+        $emailSend->setMessage(view("validar_mail",$dataView));
+        
+        return $emailSend->send();
+    }
+    
+    public function confirmar_mail(){
+        $token = $this->request->getVar('tokenAuth');
+        $email = $this->request->getVar('email');
+        
+        $result_verificar = $this->modelHome->verificar_token($token,$email);
+        if($result_verificar){
+            $result_actualizar = $this->modelHome->actualizar_valido($email);
+            if($result_actualizar){
+                $this->response->redirect(BASEURL);
+                //INFORMAR EXITO
+            }else{
+                //INFORMAR ERROR
+            }
+        }
+    }
+
+    public function iniciar_sesion(){
+        $email = $this->request->getPost('email');
+        $contrasena = $this->request->getPost('contrasena');
+        echo "<script>console.log('Entra');</script>";
+    
+        $result = $this->modelHome->validar_inicio($email, $contrasena);
+        return json_encode($result);
+    }
+
 }

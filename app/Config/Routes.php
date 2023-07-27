@@ -32,9 +32,18 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('/register', 'Home::register');
 
+//Controlar existencia de correo escrito en vista register
 $routes->post('email/check', 'Home::checkEmail');
-$routes->post('home/validar_email', 'Home::validar_email');
+
+//Registrar usuario
 $routes->post('home/insert_usuario', 'Home::insert_usuario');
+
+//Validar correo electronico
+$routes->post('home/validar_email', 'Home::validar_email');
+$routes->get('home/confirmar_mail', 'Home::confirmar_mail');
+
+//Controlar inicio de sesion
+$routes->post('home/iniciar_sesion', 'Home::iniciar_sesion');
 
 /*
  * --------------------------------------------------------------------
