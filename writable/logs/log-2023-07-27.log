@@ -24,3 +24,18 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
  7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
  8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-27 21:45:27 --> Object of class stdClass could not be converted to string
+in APPPATH\Models\HomeModel.php on line 95.
+ 1 APPPATH\Controllers\Home.php(123): App\Models\HomeModel->validar_inicio('lurikoan@gmail.com', '123')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-27 21:48:03 --> Object of class stdClass could not be converted to string
+in APPPATH\Models\HomeModel.php on line 95.
+ 1 APPPATH\Controllers\Home.php(123): App\Models\HomeModel->validar_inicio('lurikoan@gmail.com', '123')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-27 22:12:03 --> EntroN

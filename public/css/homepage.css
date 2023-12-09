@@ -1,0 +1,86 @@
+header{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0;
+    align-items: center;
+}
+header div{
+    display: flex;
+    align-items: center;
+}
+header img{
+    height: 50px;
+}
+header h1{
+    font-size: 1.5em;
+}
+header a{
+    text-decoration: none;
+}
+header a:link{
+    color: black;
+}
+header a:visited{
+    color: black;
+}
+header a:hover{
+    color:darkred;
+}
+header a:active{
+    color: black;
+}
+
+.negrita{
+    font-weight: bold;
+}
+
+nav{
+    text-align: right;
+}
+nav a{
+    text-decoration: none;
+}
+
+#section_buscar{
+    opacity: 0;
+    visibility: hidden;
+}
+#section_recomendadas{
+    opacity: 1;
+    visibility: visible;
+}
+#section_biblioteca{
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+aside a{
+    display: block;
+    text-decoration: none;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    /* position: relative;
+    bottom: 0;
+    text-align: center; */
+    margin: 50px 0;
+    background-color: black;
+}
+footer span{
+    color: white;
+}
+footer a{
+    margin: 0px 10px;
+}
+footer a:link{
+    color:white;
+}
+footer a:visited{
+    color: silver;
+}
+footer a:hover{
+    color: yellow;
+}

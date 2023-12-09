@@ -4,7 +4,7 @@ $(document).ready(function(){
 
     //Control registro usuario (no existencia del correo en base)
     $("#btn_crear").click(function(){
-        console.log("VariablesNuevo1");
+        // console.log("VariablesNuevo1");
         let ing_usu = $("#nombre_usu").val();
         let ing_email = $("#email").val();
         let ing_pass = $("#pass").val();
@@ -21,8 +21,8 @@ $(document).ready(function(){
         let ing_tel = $("#telefono").val();
         let ing_nac = $("#nacimiento").val();
 
-        if(ing_pass == ing_repass && valid_email){
-            console.log("Contraseñas iguales");
+        if(ing_pass == ing_repass && valid_email && ing_email!=""){
+            console.log("Contraseñas iguales1");
             $("#lbPass").css("color","black");
             $("#lbRePass").css("color","black");
             $("#pass_error_1").text("");
@@ -55,18 +55,26 @@ $(document).ready(function(){
                         console.log(dato);
                         window.location.href = base_url;
                     }else{
-                        //INFORMAR ERROR
+                        //INFORMAR ERROR que no se pudo crear la cuenta
                     }
                 }
             })
 
         }else{
-            console.log("Error: Contraseñas distintas");
-            $("#lbPass").css("color","red");
-            $("#lbRePass").css("color","red");
-            $("#pass_error_1").text("ERROR:");
-            $("#pass_error_2").text("Contraseñas ingresadas distintas.");
-        }
+            if(!valid_email){
+                //INFORMAR ERROR mail no válido
+                console.log("Error: Usuario ya registrado");
+            }else if(ing_email==""){
+                //INFORMAR ERROR falta ingresar usuario
+                console.log("Error: Ingrese un usuario");
+                }else{
+                    console.log("Error: Contraseñas distintas");
+                    $("#lbPass").css("color","red");
+                    $("#lbRePass").css("color","red");
+                    $("#pass_error_1").text("ERROR:");
+                    $("#pass_error_2").text("Contraseñas ingresadas distintas.");
+                }
+            }
 
     });
 
@@ -117,6 +125,7 @@ $(document).ready(function(){
                 contrasena: ses_pass
             },
             success: function(dato){
+                console.log(dato);
                 // if(dato){
                 //     console.log(dato);
                 //     window.location.href = base_url;
@@ -125,6 +134,16 @@ $(document).ready(function(){
                 // }
             }
         })
+    });
+
+    //CUENTA NO VALIDA
+    $("#btn_reenviar_correo").click(function(){
+        console.log("btn_reenviar_correo");
+    });
+
+    $("#btn_cambiar_correo").click(function(){
+        console.log("btn_cambiar_correo");
+        let nuevo_mail = $("#email_reenvio").val();
     });
 
 
@@ -138,3 +157,22 @@ function generateToken(length) {
     }
     return token;
 }
+
+
+//HOMEPAGE
+const buscar = document.querySelector("#section_buscar");
+const recomendadas = document.querySelector("#section_recomendadas");
+const biblioteca = document.querySelector("#section_biblioteca");
+
+buscar.addEventListener("click", () => {
+    class_buscar.classList.add("visible");
+    class_buscar.classList.add("");
+})
+
+recomendadas.addEventListener("click", () => {
+
+})
+
+biblioteca.addEventListener("click", () => {
+
+})

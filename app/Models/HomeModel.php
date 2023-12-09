@@ -33,7 +33,7 @@ class HomeModel extends Model{
     public function registrar_usuario($usuario, $email, $contrasena, $nombre, $apellido, $direccion, $genero, $telefono, $nacimiento, $token){
         
         //Hash para la contraseña
-        $contrasena = password_hash($contrasena, PASSWORD_DEFAULT);
+        $contrasena = password_hash($contrasena, PASSWORD_BCRYPT);
         //Obtener la fecha de generacion de cuenta
         $currentDate = date('Y-m-d');
         
@@ -48,18 +48,6 @@ class HomeModel extends Model{
             return FALSE;
         }
     }
-
-    // public function get_usuario($usuario){
-    //     $sql = "SELECT * FROM USUARIO WHERE Usuario='$usuario';";    //se crea la consulta
-    //     $query = $this->db->query($sql);    //se consulta a la db
-    //     $result = $query->getResult();      //obtiene la consulta
-
-    //     if(count($result)>=1){
-    //         return $result;
-    //     }else{
-    //         return NULL;
-    //     }
-    // }
 
     //Verificar token de validacion de correo
     public function verificar_token($token,$email){
@@ -88,19 +76,22 @@ class HomeModel extends Model{
 
     //Validar inicio de sesion
     public function validar_inicio($email, $contrasena){
-        $sql_hash = "SELECT Contrasena FROM `usuario` WHERE Email='$email';"; //Posible error al tratar el dato
+        $sql_hash = "SELECT Contrasena FROM `usuario` WHERE Email='$email';";
         $query = $this->db->query($sql_hash);
         if($query){
-            $hash = $query->getRow();
-            echo "<script>console.log($hash);</script>";
-            // if(password_verify($contrasena,$hash)){
-
-            // }
+            $hash_obj = $query->getRow();
+            $hash = (string) $hash_obj->Contrasena;
+            $hash_conv = password_hash($contrasena, PASSWORD_BCRYPT);
+            $aux = $hash_conv."' '".$hash."'";
+            // echo "<script>console.log($hash);</script>";
+            if(password_verify($contrasena,$hash)){
+                return TRUE;
+            }
         }else{
             //ERROR: no existe correo ingresado
         }
 
-        return TRUE;
+        return FALSE;
     }
 
 }

@@ -79,6 +79,24 @@ nav a:hover{
     padding-top: 25px;
 }
 
+/* Cuenta No Valida */
+#section_cuenta_no_valida{
+    display: block;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#opciones{
+    margin-top: 50px;
+}
+#reenvio_email{
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px black solid;
+}
+
 footer{
     display: flex;
     justify-content: center;

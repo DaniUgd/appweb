@@ -18,6 +18,14 @@ class Home extends BaseController{
         return view('register');
     }
 
+    public function cuenta_no_valida(){
+        return view('cuenta_no_valida');
+    }
+
+    public function homepage(){
+        return view('homepage');
+    }
+
     public function insert_usuario(){
         $usuario = $this->request->getPost('usuario');
         $email = $this->request->getPost('email');
@@ -118,7 +126,6 @@ class Home extends BaseController{
     public function iniciar_sesion(){
         $email = $this->request->getPost('email');
         $contrasena = $this->request->getPost('contrasena');
-        echo "<script>console.log('Entra');</script>";
     
         $result = $this->modelHome->validar_inicio($email, $contrasena);
         return json_encode($result);

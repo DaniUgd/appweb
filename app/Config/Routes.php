@@ -31,6 +31,8 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/register', 'Home::register');
+$routes->get('/cuenta_no_valida', 'Home::cuenta_no_valida');
+$routes->get('/homepage', 'Home::homepage');
 
 //Controlar existencia de correo escrito en vista register
 $routes->post('email/check', 'Home::checkEmail');

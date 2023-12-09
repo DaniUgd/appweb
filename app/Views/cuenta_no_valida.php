@@ -7,12 +7,11 @@
 <head>
     <title>VideoTrends</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Guia de Ejercicios N1">
+    <meta name="description" content="Cuenta no válida">
     <meta name="author" content="Mirko Czajkowski">
     <meta http-equiv="refresh" content="1800">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="<?php echo JS.'login.js' ?>"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo CSS.'login.css' ?>">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="<?php echo JS.'logic.js' ?>"></script>
@@ -20,41 +19,25 @@
 <body>
     <header>
         <div>
-            <!-- <p><?php echo base_url();?></p> -->
-            <a href="">
+            <a href="<?php echo BASEURL?>">
                 <img src="img/playicon.png" alt="Imagen título: logo play">
             </a>
-            <a href="">
+            <a href="<?php echo BASEURL?>">
                 <h1>VideoTrends</h1>
             </a>
         </div>
         <p>La <span class="negrita">biblioteca</span> de tus pelis!</p>
     </header>
 
-    <nav>
-        <a href="<?php echo BASEURL.'register'?>">Crear una Cuenta</a>
-        <span> | </span>
-        <a href="">Olvide mi contraseña</a>
-        <span> | </span>
-        <a href="">Acerca de Nosotros</a>
-    </nav>
-
-    <section id="section_principal">
-        <img id="img_cinema" src="img/cinema.png" alt="Imagen cinema">
-
-        <section id="section_log_sign">
-            <input type="email" id="email_login" name="email" placeholder="Direccion@email.com">
-            <label for="email">E-mail</label>
-            <input type="password" id="pass_login" name="pass" placeholder="Contraseña">
-            <label for="pass">Contraseña</label>
-            <button type="button" id="btn_ini_ses">INICIAR SESIÓN</button>
-            <div id="sign_in">
-                <a href="<?php echo BASEURL.'register'?>">
-                    <button>CREAR UNA CUENTA</button>
-                </a>
+    <section id="section_cuenta_no_valida">
+        <label>Cuenta no válida</label>
+        <div id="opciones">
+            <button id="btn_reenviar_correo">REENVIAR CORREO</button>
+            <div id="reenvio_email">
+                <input type="email" id="email_reenvio" name="email" placeholder="Direccion@email.com">
+                <button id="btn_cambiar_correo">CAMBIAR CORREO</button>
             </div>
-        </section>
-
+        </div>
     </section>
 
     <footer>
