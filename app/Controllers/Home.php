@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use DateTime;
+
 class Home extends BaseController{
 
     public $modelHome = NULL;
@@ -52,6 +54,7 @@ class Home extends BaseController{
             'telefono' => 'decimal',
             'nacimiento' => 'valid_date'
         ]);
+        log_message("info","Controlador Contra:".$contrasena);
 
         if($validation->withRequest($this->request)->run()){
             $result = $this->modelHome->registrar_usuario($usuario, $email, $contrasena, $nombre, $apellido, $direccion, $genero, $telefono, $nacimiento, $token);
@@ -128,7 +131,209 @@ class Home extends BaseController{
         $contrasena = $this->request->getPost('contrasena');
     
         $result = $this->modelHome->validar_inicio($email, $contrasena);
+        if($result){
+            $this->response->setCookie("cookie_usuario",
+                                        $value = $result,
+                                        $expire = new DateTime('+12 hours'),
+                                        $domain = '',
+                                        $path = '/',
+                                        $prefix = '',
+                                        $secure = false,
+                                        $httponly = false,);
+        }
+
         return json_encode($result);
     }
+
+
+
+    //CONEXION TRAKT API
+
+    
+    //Consultas a la api
+    //GET https://api.trakt.tv/movies/popular?genres=action&limit=10&page=2  --> para obtener otras 10 peliculas distintas
+    function consult_recomendadas(){
+        $movie = $this->request->getVar("movie");
+        $url = 'https://api.trakt.tv/movies/trending?extended=full&&limit=12';
+
+        $this->response->setContentType("application/json");
+        return $this->response->setJSON($this->findMovie($url));
+    }
+
+    function consult_peliculaID(){
+       
+        $movie = $this->request->getVar("idMovie");
+        $url = 'https://api.trakt.tv/movies/'.urlencode($movie)."?extended=full";
+       
+        $this->response->setContentType("application/json");
+        return $this->response->setJSON($this->findMovie($url));
+
+    }
+
+    function consult_comentarioID(){
+        $movie = $this->request->getVar("idMovie");
+        $url = 'https://api.trakt.tv/movies/'.urlencode($movie).'/comments/highest';
+       
+        $this->response->setContentType("application/json");
+        return $this->response->setJSON($this->findMovie($url));
+    }
+
+    function consult_peliculaNAME(){
+
+        $movie = $this->request->getVar("movie");
+        $url = 'https://api.trakt.tv/search/movie?query=' . urlencode($movie)."&extended=full";
+
+        $this->response->setContentType("application/json");
+        return $this->response->setJSON($this->findMovie($url));
+    }
+
+    function findMovie($url) {
+
+        // $movie = $this->request->getVar("movie");
+        // $url = 'https://api.trakt.tv/search/movie?query=' . urlencode($movie)."&extended=full";
+
+        $headers = [
+            'Content-Type: application/json',
+            'trakt-api-version: 2',
+            'trakt-api-key: 6f5823570b9049aab755f63b0981f7496f31efb73a7db68cbf756c8de5594762'
+        ];
+
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+
+        $response = curl_exec($curl);
+        $error = curl_error($curl);
+
+        curl_close($curl);
+
+        $inf = "";
+        $statusResult = false;
+
+        if ($error) {
+            $statusResult = false;
+            $inf = "Error: " . $error;
+        } else {
+
+            $data = json_decode($response, true);
+
+            if (!empty($data)) {
+
+                $statusResult = true;
+
+            } else {
+
+                $statusResult = false;
+                // $inf = Errores::getMjError(-18);     FALTA
+
+            }
+        }
+
+        // $this->response->setContentType("application/json");
+        // return $this->response->setJSON( [ "stateResult" => $statusResult, "data" =>  $data, 'inf' => $inf ] );
+        return [ "stateResult" => $statusResult, "data" =>  $data, 'inf' => $inf ];
+    }
+
+
+    //----------------------- CRUD Libreria propia de peliculas ----------------------
+    /*
+    function addMovieInLibrary(){
+
+        if(!Filter::verifyAuth($this->request, $this->response)){ 
+
+            $this->response->setContentType("application/json");
+            return $this->response->setJSON(["stateResult" =>false, "inf" =>  '', "url" => BASE_URL."api/1.0/views/login"]); 
+
+        }
+
+        log_message('info',$this->request->getJSON()->idMovie);
+
+        $permisos = $this->request->getCookie("permiso");
+        $Session = TokenSession::decodeToken($permisos);
+        
+        $idMovie = $this->request->getJSON()->idMovie;
+        $idUser = $Session["id"];
+
+        $library = new Library();
+        
+        if($library->existenceOfCombination($idMovie,$idUser) == 0){
+
+            $library->insert([
+                'idmovie' => $idMovie,
+                'iduser'  => $idUser,
+            ]);
+
+            $this->response->setContentType("application/json");
+            return $this->response->setJSON(["stateResult" => true, "inf" =>  'Pelicula añadida con exito', "url" => '']);
+        }
+
+
+        $this->response->setContentType("application/json");
+        return $this->response->setJSON(["stateResult" => false, "inf" =>  Errores::getMjError(-19), "url" => '']);
+        
+    }
+
+    //TODO: Funcionalidad no finalizada
+    function removeMovieInLibrary(){
+
+        //if(!Filter::verifyAuth($this->request, $this->response)){ 
+
+            $this->response->setContentType("application/json");
+            return $this->response->setJSON(["stateResult" =>false, "inf" =>  '', "url" => BASE_URL."api/1.0/views/login"]); 
+            
+        //}
+
+        //$permisos = $this->request->getCookie("permiso");
+        //$Session = TokenSession::decodeToken($permisos);
+        $idAccount = $Session["id"];
+
+        $movie = $this->request->getVar("idMovie");
+
+        $library = new Library();
+        $library->where('iduser', $idAccount)->where('idmovie', $movie)->delete();
+
+        $this->response->setContentType("application/json");
+        return $this->response->setJSON(["stateResult" => true, "inf" =>  "", "url" => '']);
+
+    }
+
+    function listMoviesInLibrary(){
+
+        if(!Filter::verifyAuth($this->request, $this->response)){ 
+
+            $this->response->setContentType("application/json");
+            return $this->response->setJSON(["stateResult" =>false, 
+                                             "inf" =>  '',
+                                             "url" => BASE_URL."api/1.0/views/login",
+                                            ]); 
+
+        }
+
+        $permisos = $this->request->getCookie("permiso");
+        $Session = TokenSession::decodeToken($permisos);
+        $idAccount = $Session["id"];
+        
+        $library = new Library();
+        $result = $library->getIdMovies($idAccount);
+        $movies = [];
+
+        foreach($result as $id){
+            //log_message('info',$id->idmovie);
+            $url = 'https://api.trakt.tv/movies/'.urlencode($id->idmovie)."?extended=full";
+            array_push( $movies, $this->findMovie($url)['data'] );
+            
+        }
+
+        $stateResult = false;
+        
+        if(count($movies) > 0){
+            $stateResult = true;
+        }
+
+        $this->response->setContentType("application/json");
+        return $this->response->setJSON( [ "stateResult" => $stateResult, "data" =>  $movies, 'inf' => '' ] );
+
+    }*/
 
 }

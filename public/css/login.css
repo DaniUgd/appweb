@@ -79,6 +79,10 @@ nav a:hover{
     padding-top: 25px;
 }
 
+#txt_error_inicio_sesion{
+    color: red;
+}
+
 /* Cuenta No Valida */
 #section_cuenta_no_valida{
     display: block;

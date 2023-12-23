@@ -48,6 +48,7 @@
             <input type="password" id="pass_login" name="pass" placeholder="Contraseña">
             <label for="pass">Contraseña</label>
             <button type="button" id="btn_ini_ses">INICIAR SESIÓN</button>
+            <label id="txt_error_inicio_sesion"></label>
             <div id="sign_in">
                 <a href="<?php echo BASEURL.'register'?>">
                     <button>CREAR UNA CUENTA</button>

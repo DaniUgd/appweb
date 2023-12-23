@@ -47,6 +47,15 @@ $routes->get('home/confirmar_mail', 'Home::confirmar_mail');
 //Controlar inicio de sesion
 $routes->post('home/iniciar_sesion', 'Home::iniciar_sesion');
 
+//Consultas de peliculas
+$routes->get('home/consult_recomendadas', 'Home::consult_recomendadas');
+$routes->get('home/consult_peliculaID', 'Home::consult_peliculaID');
+$routes->get('home/consult_comentarioID', 'Home::consult_comentarioID');
+$routes->get('home/consult_peliculaNAME', 'Home::consult_peliculaNAME');
+
+
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

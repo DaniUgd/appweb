@@ -42,8 +42,18 @@ nav a{
 }
 
 #section_buscar{
-    opacity: 0;
-    visibility: hidden;
+    display: none;
+}
+#section_recomendadas{
+    display: block;
+}
+#section_biblioteca{
+    display: none;
+}
+
+/* #section_buscar{
+    opacity: 1;
+    visibility: visible;
 }
 #section_recomendadas{
     opacity: 1;
@@ -52,7 +62,7 @@ nav a{
 #section_biblioteca{
     opacity: 0;
     visibility: hidden;
-}
+} */
 
 
 aside a{

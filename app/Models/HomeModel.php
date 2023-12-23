@@ -30,10 +30,10 @@ class HomeModel extends Model{
         }
     }
 
-    public function registrar_usuario($usuario, $email, $contrasena, $nombre, $apellido, $direccion, $genero, $telefono, $nacimiento, $token){
+    public function registrar_usuario($usuario, $email, $contrasena1, $nombre, $apellido, $direccion, $genero, $telefono, $nacimiento, $token){
         
         //Hash para la contraseña
-        $contrasena = password_hash($contrasena, PASSWORD_BCRYPT);
+        $contrasena = password_hash($contrasena1, PASSWORD_BCRYPT);
         //Obtener la fecha de generacion de cuenta
         $currentDate = date('Y-m-d');
         
@@ -41,10 +41,10 @@ class HomeModel extends Model{
         $query = $this->db->query($sql);
         
         if($query){
-            log_message("info","EntroN");
+            //log_message("info","EntroN");
             return TRUE;
         }else{
-            log_message("info","No Entro");
+            //log_message("info","No Entro");
             return FALSE;
         }
     }
@@ -77,18 +77,17 @@ class HomeModel extends Model{
     //Validar inicio de sesion
     public function validar_inicio($email, $contrasena){
         $sql_hash = "SELECT Contrasena FROM `usuario` WHERE Email='$email';";
+        log_message("info","".$sql_hash);
         $query = $this->db->query($sql_hash);
-        if($query){
-            $hash_obj = $query->getRow();
-            $hash = (string) $hash_obj->Contrasena;
-            $hash_conv = password_hash($contrasena, PASSWORD_BCRYPT);
-            $aux = $hash_conv."' '".$hash."'";
-            // echo "<script>console.log($hash);</script>";
-            if(password_verify($contrasena,$hash)){
-                return TRUE;
+        $hash_obj = $query->getRow();
+        if($hash_obj != null){
+            if(password_verify($contrasena,$hash_obj->Contrasena)){
+                //log_message("info","Verifica: ".$contrasena." ".$hash_obj->Contrasena);
+                $sql = "SELECT Usuario FROM `usuario` WHERE Email='$email';";
+                $query2 = $this->db->query($sql);
+                $usuario_obj = $query2->getRow();
+                return $usuario_obj->Usuario;
             }
-        }else{
-            //ERROR: no existe correo ingresado
         }
 
         return FALSE;

@@ -1,0 +1,173 @@
+INFO - 2023-12-21 21:14:50 --> EntroN
+INFO - 2023-12-21 21:21:59 --> F
+INFO - 2023-12-21 21:23:20 --> $2y$10$APWri2EfTZbqA1xmsZkmlecTDKjEvWQqD8iBJcIQZ8Gx8jgBZeLAC' '$2y$10$.UmHaVSuWkkx49br/sEP5ePBGqgaBQD.8j5NcKfmM7H'
+INFO - 2023-12-21 21:25:51 --> NO Verifica
+INFO - 2023-12-21 21:26:12 --> NO Verifica
+INFO - 2023-12-21 21:31:13 --> NO Verifica
+INFO - 2023-12-21 21:31:22 --> NO Verifica
+INFO - 2023-12-21 21:33:25 --> NO Verifica
+INFO - 2023-12-21 21:34:08 --> NO Verifica
+INFO - 2023-12-21 21:34:08 --> pruebinha $2y$10$.UmHaVSuWkkx49br/sEP5ePBGqgaBQD.8j5NcKfmM7H
+INFO - 2023-12-21 21:37:02 --> NO Verifica: pruebinha $2y$10$.UmHaVSuWkkx49br/sEP5ePBGqgaBQD.8j5NcKfmM7H
+INFO - 2023-12-21 21:38:42 --> NO Verifica: pruebinha $2y$10$.UmHaVSuWkkx49br/sEP5ePBGqgaBQD.8j5NcKfmM7H
+INFO - 2023-12-21 21:38:52 --> NO Verifica: pruebinhasdfs $2y$10$.UmHaVSuWkkx49br/sEP5ePBGqgaBQD.8j5NcKfmM7H
+INFO - 2023-12-21 21:45:29 --> Controlador Contra:aaa
+INFO - 2023-12-21 21:45:29 --> EntroN
+INFO - 2023-12-21 21:46:01 --> NO Verifica: aaa $2y$10$Es4z4Ln70JxoSa47/63Bu.QvuGsjDy3Y/lzURfTtUyi
+CRITICAL - 2023-12-21 21:48:00 --> Attempt to read property "Contrasena" on null
+in APPPATH\Models\HomeModel.php on line 83.
+ 1 APPPATH\Models\HomeModel.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Contrasena" on null', 'D:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php', 83)
+ 2 APPPATH\Controllers\Home.php(131): App\Models\HomeModel->validar_inicio('', '')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-21 21:48:10 --> NO Verifica: aaa $2y$10$Es4z4Ln70JxoSa47/63Bu.QvuGsjDy3Y/lzURfTtUyi
+INFO - 2023-12-21 21:54:54 --> Controlador Contra:bbb
+INFO - 2023-12-21 21:54:55 --> Verifica: register
+CRITICAL - 2023-12-21 21:55:20 --> Attempt to read property "Contrasena" on null
+in APPPATH\Models\HomeModel.php on line 89.
+ 1 APPPATH\Models\HomeModel.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Contrasena" on null', 'D:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php', 89)
+ 2 APPPATH\Controllers\Home.php(131): App\Models\HomeModel->validar_inicio('bbb@bbb.com', 'bbb')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 21:56:10 --> Attempt to read property "Contrasena" on null
+in APPPATH\Models\HomeModel.php on line 89.
+ 1 APPPATH\Models\HomeModel.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Contrasena" on null', 'D:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php', 89)
+ 2 APPPATH\Controllers\Home.php(131): App\Models\HomeModel->validar_inicio('bbb@bbb.com', 'bbb')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 21:57:10 --> Attempt to read property "Contrasena" on null
+in APPPATH\Models\HomeModel.php on line 92.
+ 1 APPPATH\Models\HomeModel.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Contrasena" on null', 'D:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php', 92)
+ 2 APPPATH\Controllers\Home.php(131): App\Models\HomeModel->validar_inicio('bbb@bbb.com', 'bbb')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 21:58:05 --> Attempt to read property "Contrasena" on null
+in APPPATH\Models\HomeModel.php on line 92.
+ 1 APPPATH\Models\HomeModel.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Contrasena" on null', 'D:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php', 92)
+ 2 APPPATH\Controllers\Home.php(131): App\Models\HomeModel->validar_inicio('bbb@bbb.com', 'bbb')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-21 22:00:15 --> Controlador Contra:bbb
+INFO - 2023-12-21 22:00:16 --> Verifica: register
+INFO - 2023-12-21 22:01:02 --> Controlador Contra:bbb
+INFO - 2023-12-21 22:01:02 --> Verifica: register
+INFO - 2023-12-21 22:01:02 --> EntroN
+INFO - 2023-12-21 22:01:25 --> NO Verifica: bbb $2y$10$7XkkqJAWj9l1hzk01oU5gub6yf24rd7S2FapQKQS/ob
+INFO - 2023-12-21 22:17:14 --> Controlador Contra:ccc
+INFO - 2023-12-21 22:17:15 --> Verifica: register
+INFO - 2023-12-21 22:17:15 --> hash$2y$10$GG/5j2lE/sBYTBMADHqkJOcyO.VhXiqKGpo085dLzlj/O0teya0Ga
+INFO - 2023-12-21 22:17:15 --> EntroN
+INFO - 2023-12-21 22:19:24 --> Controlador Contra:aaa
+INFO - 2023-12-21 22:19:24 --> Verifica: register
+INFO - 2023-12-21 22:19:24 --> hash$2y$10$97r4.XiJP0udWLFQYn/Hyesag1FxueqJDW9da.iI0jKjBM08Doxyi
+INFO - 2023-12-21 22:19:24 --> EntroN
+INFO - 2023-12-21 22:20:11 --> Verifica: aaa $2y$10$97r4.XiJP0udWLFQYn/Hyesag1FxueqJDW9da.iI0jKjBM08Doxyi
+CRITICAL - 2023-12-21 22:30:09 --> Attempt to read property "Contrasena" on null
+in APPPATH\Models\HomeModel.php on line 83.
+ 1 APPPATH\Models\HomeModel.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Contrasena" on null', 'D:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php', 83)
+ 2 APPPATH\Controllers\Home.php(131): App\Models\HomeModel->validar_inicio('lurikoan@hotmail.com', 'sds')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 22:35:32 --> Attempt to read property "Contrasena" on null
+in APPPATH\Models\HomeModel.php on line 83.
+ 1 APPPATH\Models\HomeModel.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Contrasena" on null', 'D:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php', 83)
+ 2 APPPATH\Controllers\Home.php(131): App\Models\HomeModel->validar_inicio('aasa@aaa.com', 'dsfsd')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 22:38:19 --> Attempt to read property "Contrasena" on null
+in APPPATH\Models\HomeModel.php on line 83.
+ 1 APPPATH\Models\HomeModel.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Contrasena" on null', 'D:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php', 83)
+ 2 APPPATH\Controllers\Home.php(131): App\Models\HomeModel->validar_inicio('sdfsf', 'sdf')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-21 22:39:44 --> SELECT Contrasena FROM `usuario` WHERE Email='sdfds';
+CRITICAL - 2023-12-21 22:39:44 --> Attempt to read property "Contrasena" on null
+in APPPATH\Models\HomeModel.php on line 84.
+ 1 APPPATH\Models\HomeModel.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Contrasena" on null', 'D:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php', 84)
+ 2 APPPATH\Controllers\Home.php(131): App\Models\HomeModel->validar_inicio('sdfds', 'sdf')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-21 22:43:17 --> SELECT Contrasena FROM `usuario` WHERE Email='sdf';
+CRITICAL - 2023-12-21 22:43:17 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Models\HomeModel.php on line 83.
+ 1 APPPATH\Models\HomeModel.php(83): count(null)
+ 2 APPPATH\Controllers\Home.php(131): App\Models\HomeModel->validar_inicio('sdf', 'dsf')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-21 22:44:07 --> SELECT Contrasena FROM `usuario` WHERE Email='sdfds';
+INFO - 2023-12-21 23:13:49 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+CRITICAL - 2023-12-21 23:13:50 --> Undefined variable $request
+in APPPATH\Views\homepage.php on line 36.
+ 1 APPPATH\Views\homepage.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $request', 'D:\\xampp\\htdocs\\appweb\\app\\Views\\homepage.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\appweb\\app\\Views\\homepage.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('homepage', [], true)
+ 5 APPPATH\Controllers\Home.php(28): view('homepage')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->homepage()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-21 23:18:03 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+CRITICAL - 2023-12-21 23:18:03 --> Undefined variable $request
+in APPPATH\Views\homepage.php on line 36.
+ 1 APPPATH\Views\homepage.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $request', 'D:\\xampp\\htdocs\\appweb\\app\\Views\\homepage.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\appweb\\app\\Views\\homepage.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('homepage', [], true)
+ 5 APPPATH\Controllers\Home.php(28): view('homepage')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->homepage()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-21 23:18:37 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+CRITICAL - 2023-12-21 23:18:37 --> Undefined variable $request
+in APPPATH\Views\homepage.php on line 36.
+ 1 APPPATH\Views\homepage.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $request', 'D:\\xampp\\htdocs\\appweb\\app\\Views\\homepage.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\appweb\\app\\Views\\homepage.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('homepage', [], true)
+ 5 APPPATH\Controllers\Home.php(28): view('homepage')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->homepage()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-21 23:18:57 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:21:11 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:22:33 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:29:50 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:30:59 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:31:36 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:33:04 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:36:59 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:37:45 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:38:54 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:40:03 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:40:51 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:41:58 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:44:07 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:44:38 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:45:10 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:46:14 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:49:38 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:50:49 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-21 23:51:33 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
