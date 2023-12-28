@@ -46,15 +46,22 @@ $routes->get('home/confirmar_mail', 'Home::confirmar_mail');
 
 //Controlar inicio de sesion
 $routes->post('home/iniciar_sesion', 'Home::iniciar_sesion');
+$routes->post('home/cerrar_sesion', 'Home::cerrar_sesion');
+
+//Modificar datos del perfil
+$routes->get('home/cargar_datos', 'Home::cargar_datos');
+$routes->post('home/guardar_datos', 'Home::guardar_datos');
 
 //Consultas de peliculas
 $routes->get('home/consult_recomendadas', 'Home::consult_recomendadas');
 $routes->get('home/consult_peliculaID', 'Home::consult_peliculaID');
 $routes->get('home/consult_comentarioID', 'Home::consult_comentarioID');
 $routes->get('home/consult_peliculaNAME', 'Home::consult_peliculaNAME');
+$routes->get('home/consult_peliculaCATEGORIA', 'Home::consult_peliculaCATEGORIA');
 
-
-
+$routes->post('home/insert_pelicula', 'Home::insert_pelicula');
+$routes->get('home/select_pelicula', 'Home::select_pelicula');
+$routes->delete('home/delete_pelicula', 'Home::delete_pelicula');
 
 /*
  * --------------------------------------------------------------------

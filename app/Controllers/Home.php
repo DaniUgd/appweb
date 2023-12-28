@@ -145,10 +145,61 @@ class Home extends BaseController{
         return json_encode($result);
     }
 
+    public function cerrar_sesion(){
+        $this->response->setCookie("cookie_usuario",
+                                        $value = '',
+                                        $expire = new DateTime('-12 hours'),
+                                        $domain = '',
+                                        $path = '/',
+                                        $prefix = '',
+                                        $secure = false,
+                                        $httponly = false,);
+        
+        return json_encode(true);
+    }
 
+    public function cargar_datos(){
+        $usuario = $_COOKIE["cookie_usuario"];
+
+        $result = $this->modelHome->get_usuario($usuario);
+
+        return json_encode($result);
+    }
+
+    public function guardar_datos(){
+        $usuario = $this->request->getPost('usuario');
+        $email = $this->request->getPost('email');
+        $contrasena = $this->request->getPost('contrasena');
+        $re_contrasena = $this->request->getPost('re_contrasena');
+        $nombre = $this->request->getPost('nombre');
+        $apellido = $this->request->getPost('apellido');
+        $direccion = $this->request->getPost('direccion');
+        $genero = $this->request->getPost('genero');
+        $telefono = $this->request->getPost('telefono');
+        $nacimiento = $this->request->getPost('nacimiento');
+        $token = $this->request->getPost('token');
+
+        $result = $this->modelHome->update_usuario($usuario, $email, $contrasena, $nombre, $apellido, $direccion, $genero, $telefono, $nacimiento, $token);
+        $correo = true;
+        if($result && $email!=null){
+            //Enviar correo de confirmación
+            $correo = $this->enviar_confirmacion($email, $nombre, $apellido, $token);
+        }
+        if($result){
+            $this->response->setCookie("cookie_usuario",
+                                        $value = $usuario,
+                                        $expire = new DateTime('+12 hours'),
+                                        $domain = '',
+                                        $path = '/',
+                                        $prefix = '',
+                                        $secure = false,
+                                        $httponly = false,);
+        }
+
+        return json_encode($result && $correo);
+    }
 
     //CONEXION TRAKT API
-
     
     //Consultas a la api
     //GET https://api.trakt.tv/movies/popular?genres=action&limit=10&page=2  --> para obtener otras 10 peliculas distintas
@@ -183,6 +234,15 @@ class Home extends BaseController{
         $movie = $this->request->getVar("movie");
         $url = 'https://api.trakt.tv/search/movie?query=' . urlencode($movie)."&extended=full";
 
+        $this->response->setContentType("application/json");
+        return $this->response->setJSON($this->findMovie($url));
+    }
+
+    //TODO: consult_peliculaCATEGORIA
+    function consult_peliculaCATEGORIA(){
+        $genre = $this->request->getVar("genre");
+        $url = 'https://api.trakt.tv/movies/popular?genres='.$genre.'&limit=20&extended=full';
+       // https://api.trakt.tv/movies/popular?genres={genre}&limit={limit}
         $this->response->setContentType("application/json");
         return $this->response->setJSON($this->findMovie($url));
     }
@@ -235,92 +295,36 @@ class Home extends BaseController{
         return [ "stateResult" => $statusResult, "data" =>  $data, 'inf' => $inf ];
     }
 
-
-    //----------------------- CRUD Libreria propia de peliculas ----------------------
-    /*
-    function addMovieInLibrary(){
-
-        if(!Filter::verifyAuth($this->request, $this->response)){ 
-
-            $this->response->setContentType("application/json");
-            return $this->response->setJSON(["stateResult" =>false, "inf" =>  '', "url" => BASE_URL."api/1.0/views/login"]); 
-
-        }
-
-        log_message('info',$this->request->getJSON()->idMovie);
-
-        $permisos = $this->request->getCookie("permiso");
-        $Session = TokenSession::decodeToken($permisos);
+    public function insert_pelicula(){
+       
+        $pelicula = $this->request->getJSON()->idMovie;
+        //$usuario  = $this->request->getCookie("cookie_usuario");
+        $usuario = $_COOKIE["cookie_usuario"];
         
-        $idMovie = $this->request->getJSON()->idMovie;
-        $idUser = $Session["id"];
-
-        $library = new Library();
+        log_message("info","PelisPlus, Cuevana: ". $pelicula." user: ".$usuario);
         
-        if($library->existenceOfCombination($idMovie,$idUser) == 0){
-
-            $library->insert([
-                'idmovie' => $idMovie,
-                'iduser'  => $idUser,
-            ]);
-
-            $this->response->setContentType("application/json");
-            return $this->response->setJSON(["stateResult" => true, "inf" =>  'Pelicula añadida con exito', "url" => '']);
-        }
-
+        $result = $this->modelHome->agregar_pelicula($pelicula, $usuario);
 
         $this->response->setContentType("application/json");
-        return $this->response->setJSON(["stateResult" => false, "inf" =>  Errores::getMjError(-19), "url" => '']);
-        
+        return $this->response->setJSON(["stateResult" => true]);
     }
 
-    //TODO: Funcionalidad no finalizada
-    function removeMovieInLibrary(){
-
-        //if(!Filter::verifyAuth($this->request, $this->response)){ 
-
-            $this->response->setContentType("application/json");
-            return $this->response->setJSON(["stateResult" =>false, "inf" =>  '', "url" => BASE_URL."api/1.0/views/login"]); 
-            
-        //}
-
-        //$permisos = $this->request->getCookie("permiso");
-        //$Session = TokenSession::decodeToken($permisos);
-        $idAccount = $Session["id"];
-
-        $movie = $this->request->getVar("idMovie");
-
-        $library = new Library();
-        $library->where('iduser', $idAccount)->where('idmovie', $movie)->delete();
-
-        $this->response->setContentType("application/json");
-        return $this->response->setJSON(["stateResult" => true, "inf" =>  "", "url" => '']);
-
-    }
-
-    function listMoviesInLibrary(){
-
-        if(!Filter::verifyAuth($this->request, $this->response)){ 
-
-            $this->response->setContentType("application/json");
-            return $this->response->setJSON(["stateResult" =>false, 
-                                             "inf" =>  '',
-                                             "url" => BASE_URL."api/1.0/views/login",
-                                            ]); 
-
-        }
-
-        $permisos = $this->request->getCookie("permiso");
-        $Session = TokenSession::decodeToken($permisos);
-        $idAccount = $Session["id"];
+    public function select_pelicula(){
         
-        $library = new Library();
-        $result = $library->getIdMovies($idAccount);
+        $usuario = $_COOKIE["cookie_usuario"];
+        $result = $this->modelHome->consultar_pelicula($usuario);
         $movies = [];
 
-        foreach($result as $id){
+        if(!isset($result)){
+            $stateResult = true;
+
+            $this->response->setContentType("application/json");
+            return $this->response->setJSON( [ "stateResult" => $stateResult, "data" => null] );
+        }
+        
+        foreach($result as $row){
             //log_message('info',$id->idmovie);
-            $url = 'https://api.trakt.tv/movies/'.urlencode($id->idmovie)."?extended=full";
+            $url = 'https://api.trakt.tv/movies/'.urlencode($row->Pelicula)."?extended=full";
             array_push( $movies, $this->findMovie($url)['data'] );
             
         }
@@ -332,8 +336,17 @@ class Home extends BaseController{
         }
 
         $this->response->setContentType("application/json");
-        return $this->response->setJSON( [ "stateResult" => $stateResult, "data" =>  $movies, 'inf' => '' ] );
+        return $this->response->setJSON( [ "stateResult" => $stateResult, "data" =>  $movies] );
 
-    }*/
+    }
+
+    public function delete_pelicula(){
+        $usuario = $_COOKIE["cookie_usuario"];
+        $pelicula = $this->request->getVar("idMovie");
+        $result = $this->modelHome->borrar_pelicula($pelicula, $usuario);
+
+        $this->response->setContentType("application/json");
+        return $this->response->setJSON( [ "stateResult" => $result] );
+    }
 
 }

@@ -1,0 +1,26 @@
+CRITICAL - 2023-12-28 00:11:21 --> Undefined variable $data
+in APPPATH\Controllers\Home.php on line 266.
+ 1 APPPATH\Controllers\Home.php(266): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php', 266)
+ 2 APPPATH\Controllers\Home.php(182): App\Controllers\Home->findMovie('https://api.trakt.tv/movies/trending?extended=full&&limit=12')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->consult_recomendadas()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-28 03:37:55 --> Undefined variable $contrasena
+in APPPATH\Models\HomeModel.php on line 115.
+ 1 APPPATH\Models\HomeModel.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contrasena', 'C:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php', 115)
+ 2 APPPATH\Controllers\Home.php(182): App\Models\HomeModel->update_usuario('MirkoCzajka', '', '', 'Mirko', 'Czajkowski', 'Paraguay 256', '1', '3754470247', '2000-11-23', 'olrvKnL8vmFnNWFKkU1QLRFaPN5mdemN')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->guardar_datos()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-28 03:40:04 --> Undefined variable $contrasena
+in APPPATH\Models\HomeModel.php on line 121.
+ 1 APPPATH\Models\HomeModel.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contrasena', 'C:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php', 121)
+ 2 APPPATH\Controllers\Home.php(182): App\Models\HomeModel->update_usuario('MirkoCzajka', '', '', 'Mirko', 'Czajkowski', 'Paraguay 256', '1', '3754470247', '2000-11-23', 'qrq7jWA0vNZ5OI6trS5FoFxiDYTULNl7')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->guardar_datos()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-28 03:42:46 --> SELECT Contrasena FROM `usuario` WHERE Email='lurikoan@gmail.com';
+INFO - 2023-12-28 03:42:56 --> PelisPlus, Cuevana: 539738 user: MirkoCzajka

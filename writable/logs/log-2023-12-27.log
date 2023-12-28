@@ -1,0 +1,212 @@
+CRITICAL - 2023-12-27 05:19:42 --> Undefined array key "cookie_usuario"
+in APPPATH\Views\homepage.php on line 3.
+ 1 APPPATH\Views\homepage.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cookie_usuario"', 'C:\\xampp\\htdocs\\appweb\\app\\Views\\homepage.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\appweb\\app\\Views\\homepage.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('homepage', [], true)
+ 5 APPPATH\Controllers\Home.php(28): view('homepage')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->homepage()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-27 05:25:12 --> Undefined array key "cookie_usuario"
+in APPPATH\Views\homepage.php on line 3.
+ 1 APPPATH\Views\homepage.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cookie_usuario"', 'C:\\xampp\\htdocs\\appweb\\app\\Views\\homepage.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\appweb\\app\\Views\\homepage.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('homepage', [], true)
+ 5 APPPATH\Controllers\Home.php(28): view('homepage')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->homepage()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-27 05:25:46 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+CRITICAL - 2023-12-27 05:29:04 --> Undefined property: stdClass::$idMovie
+in APPPATH\Controllers\Home.php on line 354.
+ 1 APPPATH\Controllers\Home.php(354): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$idMovie', 'C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php', 354)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_pelicula()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-27 05:31:02 --> Undefined property: stdClass::$idMovie
+in APPPATH\Controllers\Home.php on line 354.
+ 1 APPPATH\Controllers\Home.php(354): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$idMovie', 'C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php', 354)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_pelicula()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-27 05:35:25 --> Undefined variable $usuario
+in APPPATH\Controllers\Home.php on line 355.
+ 1 APPPATH\Controllers\Home.php(355): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php', 355)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_pelicula()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-27 05:35:44 --> Undefined variable $usuario
+in APPPATH\Controllers\Home.php on line 355.
+ 1 APPPATH\Controllers\Home.php(355): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php', 355)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_pelicula()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-27 05:39:27 --> Undefined variable $usuario
+in APPPATH\Controllers\Home.php on line 355.
+ 1 APPPATH\Controllers\Home.php(355): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php', 355)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_pelicula()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-27 05:40:26 --> syntax error, unexpected token ";", expecting ")"
+in APPPATH\Controllers\Home.php on line 357.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-27 05:40:43 --> syntax error, unexpected token ";", expecting ")"
+in APPPATH\Controllers\Home.php on line 357.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-27 05:42:13 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 05:42:13 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 05:43:45 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 05:43:45 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 05:46:51 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 05:46:51 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 05:47:29 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 05:47:29 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 05:47:31 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 05:47:31 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 05:47:32 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 05:47:32 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 05:47:33 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 05:47:33 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 05:47:33 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 05:47:33 --> PelisPlus, Cuevana: 539738 user: aaa
+ERROR - 2023-12-27 06:04:19 --> mysqli_sql_exception: Unknown column 'aaa' in 'where clause' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM `...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(109): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(370): App\Models\HomeModel->consultar_pelicula('aaa')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->select_pelicula()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-27 06:04:19 --> Unknown column 'aaa' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM `biblioteca` WHERE Usuario=`aaa`;', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `biblioteca` WHERE Usuario=`aaa`;')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `biblioteca` WHERE Usuario=`aaa`;')
+ 4 APPPATH\Models\HomeModel.php(109): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `biblioteca` WHERE Usuario=`aaa`;')
+ 5 APPPATH\Controllers\Home.php(370): App\Models\HomeModel->consultar_pelicula('aaa')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->select_pelicula()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-27 06:05:08 --> mysqli_sql_exception: Unknown column 'aaa' in 'where clause' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM `...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(109): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(370): App\Models\HomeModel->consultar_pelicula('aaa')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->select_pelicula()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-27 06:05:08 --> Unknown column 'aaa' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM `biblioteca` WHERE Usuario=`aaa`;', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `biblioteca` WHERE Usuario=`aaa`;')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `biblioteca` WHERE Usuario=`aaa`;')
+ 4 APPPATH\Models\HomeModel.php(109): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `biblioteca` WHERE Usuario=`aaa`;')
+ 5 APPPATH\Controllers\Home.php(370): App\Models\HomeModel->consultar_pelicula('aaa')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->select_pelicula()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-27 06:25:10 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Home.php on line 370.
+ 1 APPPATH\Controllers\Home.php(370): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php', 370)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->select_pelicula()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-27 06:25:23 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Home.php on line 370.
+ 1 APPPATH\Controllers\Home.php(370): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php', 370)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->select_pelicula()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-27 06:26:22 --> PelisPlus, Cuevana: 539738 user: aaa
+CRITICAL - 2023-12-27 06:27:29 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Home.php on line 370.
+ 1 APPPATH\Controllers\Home.php(370): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php', 370)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->select_pelicula()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-27 06:27:36 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Home.php on line 370.
+ 1 APPPATH\Controllers\Home.php(370): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php', 370)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->select_pelicula()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-27 06:27:42 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Home.php on line 370.
+ 1 APPPATH\Controllers\Home.php(370): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php', 370)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->select_pelicula()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-27 06:29:59 --> PelisPlus, Cuevana: 539738 user: aaa
+CRITICAL - 2023-12-27 06:32:16 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Home.php on line 370.
+ 1 APPPATH\Controllers\Home.php(370): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php', 370)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->select_pelicula()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-27 06:32:23 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 06:32:51 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 06:32:53 --> PelisPlus, Cuevana: 677824 user: aaa
+INFO - 2023-12-27 06:32:56 --> PelisPlus, Cuevana: 827935 user: aaa
+CRITICAL - 2023-12-27 06:33:18 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Home.php on line 370.
+ 1 APPPATH\Controllers\Home.php(370): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php', 370)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->select_pelicula()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-27 06:43:32 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 06:43:33 --> PelisPlus, Cuevana: 539738 user: aaa
+INFO - 2023-12-27 06:43:34 --> PelisPlus, Cuevana: 539738 user: aaa
+CRITICAL - 2023-12-27 06:56:03 --> Undefined array key "cookie_usuario"
+in APPPATH\Views\homepage.php on line 3.
+ 1 APPPATH\Views\homepage.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cookie_usuario"', 'C:\\xampp\\htdocs\\appweb\\app\\Views\\homepage.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\appweb\\app\\Views\\homepage.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('homepage', [], true)
+ 5 APPPATH\Controllers\Home.php(28): view('homepage')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->homepage()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-27 06:56:20 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-27 06:57:53 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-27 06:58:26 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-27 18:57:17 --> Controlador Contra:2307
+INFO - 2023-12-27 18:57:36 --> SELECT Contrasena FROM `usuario` WHERE Email='lurikoan@gmail.com';

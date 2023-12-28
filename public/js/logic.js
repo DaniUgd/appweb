@@ -67,14 +67,14 @@ $(document).ready(function(){
             }else if(ing_email==""){
                 //INFORMAR ERROR falta ingresar usuario
                 console.log("Error: Ingrese un usuario");
-                }else{
-                    console.log("Error: Contraseñas distintas");
-                    $("#lbPass").css("color","red");
-                    $("#lbRePass").css("color","red");
-                    $("#pass_error_1").text("ERROR:");
-                    $("#pass_error_2").text("Contraseñas ingresadas distintas.");
-                }
+            }else{
+                console.log("Error: Contraseñas distintas");
+                $("#lbPass").css("color","red");
+                $("#lbRePass").css("color","red");
+                $("#pass_error_1").text("ERROR:");
+                $("#pass_error_2").text("Contraseñas ingresadas distintas.");
             }
+        }
 
     });
 
@@ -148,6 +148,10 @@ $(document).ready(function(){
         let nuevo_mail = $("#email_reenvio").val();
     });
 
+    //MODIFICAR PERFIL
+    $("#btnGuardarCambios").click(function(){
+        console.log("btn_guardar_cambios");
+    });
 
 });
 
@@ -160,44 +164,8 @@ function generateToken(length) {
     return token;
 }
 
-
 //HOMEPAGE
-console.log("hola2");
-galletitas();
-let cookie_usuario;
-// let nameUser = document.getElementById("NombreUsuario");
-
-function galletitas(){
-    
-    cookie_usuario = obtenerCookie("cookie_usuario");
-    console.log(cookie_usuario);
-    
-    // nameUser.textContent = cookie_usuario;
-    // console.log(nameUser);
-
-    function obtenerCookie(nombre) {
-        // Crea una expresión regular para buscar el nombre de la cookie seguido por el valor
-        var nombreEQ = nombre + "=";
-        // Divide la cadena de cookies en partes usando el caracter ";"
-        var cookies = document.cookie.split(';');
-        
-        // Itera sobre cada cookie para encontrar la que contiene el nombre buscado
-        for (var i = 0; i < cookies.length; i++) {
-            var cookie = cookies[i];
-            // Elimina espacios en blanco al principio de la cookie
-            while (cookie.charAt(0) == ' ') {
-                cookie = cookie.substring(1, cookie.length);
-            }
-            // Si la cookie comienza con el nombre buscado, devuelve el valor de la cookie
-            if (cookie.indexOf(nombreEQ) == 0) {
-                return decodeURIComponent(cookie.substring(nombreEQ.length, cookie.length));
-            }
-        }
-        // Si no se encuentra la cookie, devuelve null
-        return null;
-    }
-
-}
+console.log("hola3");
 
 function display(id){
     
@@ -225,19 +193,180 @@ function display(id){
 
 }
 
-//Consultas de peliculas al servidor
 
+function setEventClickCerrarSesion(){
+    
+    let btnCerrarSesion = document.getElementById("CerrarLaSesion");
+    btnCerrarSesion.addEventListener("click", () => {
+        cerrarSesion();
+    });
+}
+
+function cerrarSesion(){
+    console.log("Axelisi");
+    $.ajax({
+        type: 'POST',
+        url: base_url + 'home/cerrar_sesion',
+        dataType: 'json',
+        data:{},
+        success: function(result){
+            console.log("Redireccindo");
+            window.location.href = base_url;
+        }
+    });
+}
+
+let hash_pass;
+let correo_actual;
+
+//Modificar datos del perfil
+function cargarModificarDatos(){
+    let dat_home_nombre_usu = document.getElementById("home_nombre_usu");
+    let dat_home_email = document.getElementById("email");
+    // let dat_home_pass = document.getElementById("home_pass");
+    // let dat_home_pass_rep = document.getElementById("home_pass_rep");
+    let dat_home_nombre_per = document.getElementById("home_nombre_per");
+    let dat_home_apellido = document.getElementById("home_apellido");
+    let dat_home_direccion = document.getElementById("home_direccion");
+    let dat_home_gen_masculino = document.getElementById("home_gen_masculino");
+    let dat_home_gen_femenino = document.getElementById("home_gen_femenino");
+    let dat_home_telefono = document.getElementById("home_telefono");
+    let dat_home_nacimiento = document.getElementById("home_nacimiento");
+
+    $.ajax({
+        type: 'GET',
+        url: base_url + 'home/cargar_datos',
+        dataType: 'json',
+        data:{},
+        success: function(res_usu){
+            if(res_usu){
+                console.log("Obtuvo");
+                console.log(res_usu);
+
+                dat_home_nombre_usu.value = res_usu[0].Usuario;
+                dat_home_email.value = res_usu[0].Email;
+                // dat_home_pass.value = res_usu[0].;
+                // dat_home_pass_rep.value = res_usu[0].;
+                dat_home_nombre_per.value = res_usu[0].Nombre;
+                dat_home_apellido.value = res_usu[0].Apellido;
+                dat_home_direccion.value = res_usu[0].Direccion;
+                if(res_usu[0].Genero){
+                    dat_home_gen_masculino.checked = true;
+                }else{
+                    dat_home_gen_femenino.checked = true;
+                }
+                dat_home_telefono.value = res_usu[0].Telefono;
+                dat_home_nacimiento.value = res_usu[0].Nacimiento;
+                
+                correo_actual = res_usu[0].Email;
+                hash_pass = res_usu[0].Contrasena;
+
+            }else{
+                console.log("No Obtuvo");
+            }
+        }
+    });
+}
+
+let valid_email = true;
+
+function guardarModificarDatos(){
+    let nombre_usu = document.getElementById("home_nombre_usu").value;
+    let email = document.getElementById("email").value;
+    let pass = document.getElementById("home_pass").value;
+    let pass_rep = document.getElementById("home_pass_rep").value;
+    let nombre_per = document.getElementById("home_nombre_per").value;
+    let apellido = document.getElementById("home_apellido").value;
+    let direccion = document.getElementById("home_direccion").value;
+    let gen_masculino = document.getElementById("home_gen_masculino").checked;
+    let gen_femenino = document.getElementById("home_gen_femenino").checked;
+    let telefono = document.getElementById("home_telefono").value;
+    let nacimiento = document.getElementById("home_nacimiento").value;
+    let ing_gen;
+    if(gen_masculino){
+        ing_gen = 1;
+    }else{
+        ing_gen = 0;
+    }
+    
+    // console.log(hash_pass);
+    // console.log(valid_email);
+    // console.log(email);
+    // console.log(correo_actual);
+    console.log(gen_masculino);
+    console.log(ing_gen);
+    if(email == correo_actual){
+        valid_email = true;
+        email = null;
+        console.log("Entra por email igual");
+    }
+    if(pass == pass_rep && valid_email && email!=""){
+        console.log("Contraseñas iguales1");
+        $("#lbPass").css("color","black");
+        $("#lbRePass").css("color","black");
+        $("#pass_error_1").text("");
+        $("#pass_error_2").text("");
+        
+        if(pass == ""){
+            pass = null;
+        }
+
+        //Obtener token para confirmacion de email
+        let ing_token = generateToken(32);
+        console.log(ing_token);
+        
+        console.log("Antes Ajax1");
+        $.ajax({
+            type: 'POST',
+            url: base_url + 'home/guardar_datos',
+            dataType: 'json',
+            data:{
+                usuario: nombre_usu,
+                email: email,
+                contrasena: pass,
+                nombre: nombre_per,
+                apellido: apellido,
+                direccion: direccion,
+                genero: ing_gen,
+                telefono: telefono,
+                nacimiento: nacimiento,
+                token: ing_token
+            },
+            success: function(dato){
+                if(dato){
+                    console.log(dato);
+                }else{
+                    //INFORMAR ERROR que no se pudo modificar el perfil
+                    console.log("Error en actualizar perfil")
+                }
+            }
+        })
+    }else{
+        if(!valid_email){
+            //INFORMAR ERROR mail no válido
+            console.log("Error: Usuario ya registrado");
+        }else if(email==""){
+            //INFORMAR ERROR falta ingresar usuario
+            console.log("Error: Ingrese un usuario");
+        }else{
+            console.log("Error: Contraseñas distintas");
+            $("#lbPass").css("color","red");
+            $("#lbRePass").css("color","red");
+            $("#pass_error_1").text("ERROR:");
+            $("#pass_error_2").text("Contraseñas ingresadas distintas.");
+        }
+    }
+}
+
+//Consultas de peliculas al servidor
 
 //document.getElementById("aBuscar").addEventListener("click", cargarRecommendedMovies());
 
-//cargarRecommendedMovies();
-
 function cargarRecommendedMovies(){
-
-    //TODO: ver si definimos la animacion de carga mientras se espera la respuesta:
 
     //const spinner = document.getElementById('spinner');
     //spinner.style.display = 'block';
+    let containerRecommended = document.getElementById("container-recommended-movies");
 
     fetch(base_url + "home/consult_recomendadas", {
         method: 'GET',
@@ -246,10 +375,8 @@ function cargarRecommendedMovies(){
     .then(res => res.json())
     .then(async result => {
 
-        console.log(result);
-        const moviePromises = result.data.map(async result => console.log(await getCommentsMovie(result.movie.ids.trakt)));
-
-        /*
+        //const moviePromises = result.data.map(async result => console.log(await getCommentsMovie(result.movie.ids.trakt)));
+        
         const moviePromises = result.data.map(async result => itemMovie(result.movie, await getCommentsMovie(result.movie.ids.trakt)));
         const movies = await Promise.all(moviePromises);
         
@@ -259,7 +386,7 @@ function cargarRecommendedMovies(){
             fragmento.appendChild(movie);
         });
         containerRecommended.appendChild(fragmento);
-        spinner.style.display = 'none';*/
+        //spinner.style.display = 'none';
 
     })
     .catch(err => console.log(err));
@@ -278,8 +405,7 @@ function getCommentsMovie(id) {
     });
 }
 
-//------- Busqueda de peliculas por nombre o por genero:
-
+//Busqueda de peliculas por nombre o por genero
 
 function setEventToBtnFind(){
 
@@ -287,9 +413,9 @@ function setEventToBtnFind(){
     let inputFind = document.getElementById("input-find");
     let containerResultFind = document.getElementById('container-result-find');
 
+    //Buscamos todo los elementos de dom que se encuentren dentro de un elemento padre con clase .container-categories y la clase .category en el hijo:
     let btnFindByCategory = document.querySelectorAll(".container-categories .category");
     
-    console.log(btnFindByCategory)
     btnFind.addEventListener("click", async ()=>{
             
             let result = await findMovie(inputFind.value);
@@ -308,28 +434,29 @@ function setEventToBtnFind(){
                 children[i].remove();
             }
             containerResultFind.appendChild(fragmento);
-            spinner.style.display = 'none';
+            //spinner.style.display = 'none';
 
     });
 
 
     let btnCategories = document.querySelector("#search-bar #btn-categories");
-    console.log(btnCategories.innerText);
 
     btnFindByCategory.forEach((btn,i)=>{
         
         btn.addEventListener('click', async ()=>{
 
             btnCategories.innerText = btn.innerText;
+            let result = await consult_peliculaCATEGORIA(btn.innerText);
 
-            let result = await findMovieByGenre(btn.innerText);
-            
-            //console.log(result.map(console.log("hola")));
-
-            const moviePromises = result.map(async movie =>itemMovie(movie, await getCommentsMovie(movie.ids.trakt)));
+            const moviePromises = result.map(async movie => itemMovie(movie, await getCommentsMovie(movie.ids.trakt)));
+            //Una vez finalizado la peticion asincrona se retorna una lista de componentes itemMovie:
             const movies = await Promise.all(moviePromises);
 
-            //console.log("-->"+movies);
+            //Nota:
+            //A continuacion : Creamos un documentfragment para anadir todo los item movie en ese compoente para luego añadir
+            //ese componente al dom, de este modo no se añade de a uno cada componente(lo que significaria recalcular todos los componentes del dom 
+            //por cada item movie que se añada), de este modo solo se añde un componete al dom que contendra la lista de movie:
+
             const fragmento = document.createDocumentFragment();
             movies.forEach(movie => {
                 //console.log('-->'+movie);
@@ -342,7 +469,7 @@ function setEventToBtnFind(){
                 children[i].remove();
             }
             containerResultFind.appendChild(fragmento);
-            spinner.style.display = 'none';
+            //spinner.style.display = 'none';
 
         });
 
@@ -350,15 +477,15 @@ function setEventToBtnFind(){
 
 
 }
-/*
+
 function findMovie(name){
 
-    const spinner = document.getElementById('spinner');
-    spinner.style.display = 'block';
+    //const spinner = document.getElementById('spinner');
+    ///spinner.style.display = 'block';
 
     return new Promise((resolve, reject) => {
-
-        fetch('<?= BASE_URL.'api/1.0/user/findMovie?movie=' ?>'+name, {
+        //base_url +"home/consult_comentarioID?idMovie="+ id,
+        fetch(base_url +"home/consult_peliculaNAME?movie="+ name, {
             method: 'GET',
         })
         .then(res => res.json())
@@ -368,14 +495,14 @@ function findMovie(name){
     });
 } 
 
-function findMovieByGenre(genre){
+function consult_peliculaCATEGORIA(genre){
 
-    const spinner = document.getElementById('spinner');
-    spinner.style.display = 'block';
+    //const spinner = document.getElementById('spinner');
+    //spinner.style.display = 'block';
 
     return new Promise((resolve, reject) => {
 
-        fetch('<?= BASE_URL.'api/1.0/user/findMovieByCategory?genre=' ?>'+genre, {
+        fetch(base_url + "home/consult_peliculaCATEGORIA?genre="+genre, {
             method: 'GET',
         })
         .then(res => res.json())
@@ -385,11 +512,92 @@ function findMovieByGenre(genre){
     });
 
 }
-*/
 
+function addMylibraryEventClick(idMovie){
 
+    fetch( base_url + 'home/insert_pelicula', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({'idMovie' : idMovie}) 
+    })
 
+    .then(res => res.json())
+    .then(data => {
 
+        if(data.stateResult){
+
+            let itemMovie = document.querySelector('#item-movie[key="'+idMovie+'"]');
+
+            let itemMovieCopy = itemMovie.cloneNode(true);
+
+            setMovieInMyLibrary(itemMovieCopy);
+
+            btnAddMovieOrigin =  itemMovie.querySelector('#btn-addMovie');
+            btnAddMovieOrigin.classList.remove("link-success");
+            btnAddMovieOrigin.classList.add("link-secondary");
+
+        }
+
+    })
+    .catch(err => {alert(err);});
+
+}
+
+function setMovieInMyLibrary(itemMovieCopy){
+
+    let btnAddMovie = itemMovieCopy.querySelector('#btn-addMovie')
+
+    btnAddMovie.removeEventListener('click',  () => addMylibraryEventClick(movie.ids.trakt));//TODO: no esta removiendo el evento
+    btnAddMovie.textContent = "Eliminar de Biblioteca"
+    btnAddMovie.style.color = 'red';
+
+    btnAddMovie.addEventListener('click', () => removeMovieFromLibraryEventClick(itemMovieCopy));
+    let containerLibrary = document.getElementById("container-library-movies");
+    containerLibrary.appendChild(itemMovieCopy);
+     
+}
+
+function cargarMyLibrary(){
+    fetch(base_url +'home/select_pelicula', {
+        method: 'GET',
+    })
+
+    .then(res => res.json())
+    .then( async result => {
+
+        if(result.stateResult){
+
+                const moviePromises = result.data.map(async movie => itemMovie(movie , await getCommentsMovie(movie.ids.trakt)));
+                const movies = await Promise.all(moviePromises);
+
+                const fragmento = document.createDocumentFragment();
+
+                movies.forEach(movie => {
+
+                    setMovieInMyLibrary(movie);
+    
+                }); 
+        } 
+    })
+    .catch(err => console.log("No se encuentran peliculas en la biblioteca."));
+}
+
+function removeMovieFromLibraryEventClick(itemMovie){
+    
+    fetch(base_url +"home/delete_pelicula?idMovie=" + itemMovie.getAttribute("key"), {
+        method: 'DELETE',
+    })
+
+    .then(res => res.json())
+    .then(result => {
+
+        if(result.stateResult){
+            itemMovie.remove();
+            console.log("Eliminado con exito");
+        } 
+    })
+    .catch(err => console.log("No se ha podio eliminar la pelicula de la biblioteca. Error: "+err));
+}
 
 function itemMovie(movie , comentarios){
         
@@ -490,7 +698,3 @@ function itemMovie(movie , comentarios){
    return itemMovie;
 
 }
-
-
-
-

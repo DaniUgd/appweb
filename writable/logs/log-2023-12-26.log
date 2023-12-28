@@ -1,0 +1,439 @@
+INFO - 2023-12-26 03:41:10 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-26 03:49:55 --> Controlador Contra:aaa
+ERROR - 2023-12-26 03:49:56 --> mysqli_sql_exception: Unknown column 'Valido' in 'field list' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'eGvETg2WHwO1rLB...')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-26 03:49:56 --> Unknown column 'Valido' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$rxH8nmDhHeec3Nj2XafCKut0ZO8WZJbZOPup3oQG97unTFJoEAPLq\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'eGvETg2WHwO1rLBTG317cyY2zigVQhLW\', \'2023-12-26\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$rxH8nmDhHeec3Nj2XafCKut0ZO8WZJbZOPup3oQG97unTFJoEAPLq\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'eGvETg2WHwO1rLBTG317cyY2zigVQhLW\', \'2023-12-26\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$rxH8nmDhHeec3Nj2XafCKut0ZO8WZJbZOPup3oQG97unTFJoEAPLq\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'eGvETg2WHwO1rLBTG317cyY2zigVQhLW\', \'2023-12-26\');')
+ 4 APPPATH\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$rxH8nmDhHeec3Nj2XafCKut0ZO8WZJbZOPup3oQG97unTFJoEAPLq\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'eGvETg2WHwO1rLBTG317cyY2zigVQhLW\', \'2023-12-26\');')
+ 5 APPPATH\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'eGvETg2WHwO1rLBTG317cyY2zigVQhLW')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-26 03:50:19 --> Controlador Contra:aaa
+ERROR - 2023-12-26 03:50:19 --> mysqli_sql_exception: Unknown column 'Valido' in 'field list' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', '8mzIL0qdht34qv7...')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-26 03:50:19 --> Unknown column 'Valido' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$2cwjMjPmpAl9fpqkCH/2Eew8piPcgIqQzXP//8W3kzYvt/uTadWli\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'8mzIL0qdht34qv7baOxymBLAv78iPv5d\', \'2023-12-26\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$2cwjMjPmpAl9fpqkCH/2Eew8piPcgIqQzXP//8W3kzYvt/uTadWli\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'8mzIL0qdht34qv7baOxymBLAv78iPv5d\', \'2023-12-26\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$2cwjMjPmpAl9fpqkCH/2Eew8piPcgIqQzXP//8W3kzYvt/uTadWli\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'8mzIL0qdht34qv7baOxymBLAv78iPv5d\', \'2023-12-26\');')
+ 4 APPPATH\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$2cwjMjPmpAl9fpqkCH/2Eew8piPcgIqQzXP//8W3kzYvt/uTadWli\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'8mzIL0qdht34qv7baOxymBLAv78iPv5d\', \'2023-12-26\');')
+ 5 APPPATH\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', '8mzIL0qdht34qv7baOxymBLAv78iPv5d')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-26 03:50:39 --> Array to string conversion
+in APPPATH\Views\homepage.php on line 36.
+ 1 APPPATH\Views\homepage.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\appweb\\app\\Views\\homepage.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\appweb\\app\\Views\\homepage.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('homepage', [], true)
+ 5 APPPATH\Controllers\Home.php(28): view('homepage')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->homepage()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-26 03:51:16 --> Controlador Contra:aaa
+ERROR - 2023-12-26 03:51:16 --> mysqli_sql_exception: Unknown column 'Valido' in 'field list' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'gT5x4KC3NzcKlbo...')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-26 03:51:16 --> Unknown column 'Valido' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$CohIRLs7T6yXMN9tgEjd6.6sDKGuffU3WzRGPghbJ61GfnjsQ643S\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'gT5x4KC3NzcKlboa0qudJr0blSfJcrwO\', \'2023-12-26\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$CohIRLs7T6yXMN9tgEjd6.6sDKGuffU3WzRGPghbJ61GfnjsQ643S\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'gT5x4KC3NzcKlboa0qudJr0blSfJcrwO\', \'2023-12-26\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$CohIRLs7T6yXMN9tgEjd6.6sDKGuffU3WzRGPghbJ61GfnjsQ643S\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'gT5x4KC3NzcKlboa0qudJr0blSfJcrwO\', \'2023-12-26\');')
+ 4 APPPATH\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$CohIRLs7T6yXMN9tgEjd6.6sDKGuffU3WzRGPghbJ61GfnjsQ643S\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'gT5x4KC3NzcKlboa0qudJr0blSfJcrwO\', \'2023-12-26\');')
+ 5 APPPATH\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'gT5x4KC3NzcKlboa0qudJr0blSfJcrwO')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-26 03:51:16 --> Controlador Contra:aaa
+ERROR - 2023-12-26 03:51:16 --> mysqli_sql_exception: Unknown column 'Valido' in 'field list' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'CXxgONRHKC2J4GC...')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-26 03:51:16 --> Unknown column 'Valido' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$MqH9LTNOaM35FVOT/WE1ce5oooSS4JF.hiNRnW70ps4RDwKkh9Nqq\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'CXxgONRHKC2J4GCMFhwvGQ2AvMsZw09b\', \'2023-12-26\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$MqH9LTNOaM35FVOT/WE1ce5oooSS4JF.hiNRnW70ps4RDwKkh9Nqq\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'CXxgONRHKC2J4GCMFhwvGQ2AvMsZw09b\', \'2023-12-26\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$MqH9LTNOaM35FVOT/WE1ce5oooSS4JF.hiNRnW70ps4RDwKkh9Nqq\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'CXxgONRHKC2J4GCMFhwvGQ2AvMsZw09b\', \'2023-12-26\');')
+ 4 APPPATH\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$MqH9LTNOaM35FVOT/WE1ce5oooSS4JF.hiNRnW70ps4RDwKkh9Nqq\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'CXxgONRHKC2J4GCMFhwvGQ2AvMsZw09b\', \'2023-12-26\');')
+ 5 APPPATH\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'CXxgONRHKC2J4GCMFhwvGQ2AvMsZw09b')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-26 03:51:16 --> Controlador Contra:aaa
+ERROR - 2023-12-26 03:51:16 --> mysqli_sql_exception: Unknown column 'Valido' in 'field list' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'iW45xyEMYwxiby8...')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-26 03:51:16 --> Unknown column 'Valido' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$Do/kzXiKNvZtjnv3r2Pkwu5HaE4AlZ1hv9AlnLjSiRfXeOa6IwLzC\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'iW45xyEMYwxiby8SM6TnPNoAXLTijbHd\', \'2023-12-26\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$Do/kzXiKNvZtjnv3r2Pkwu5HaE4AlZ1hv9AlnLjSiRfXeOa6IwLzC\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'iW45xyEMYwxiby8SM6TnPNoAXLTijbHd\', \'2023-12-26\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$Do/kzXiKNvZtjnv3r2Pkwu5HaE4AlZ1hv9AlnLjSiRfXeOa6IwLzC\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'iW45xyEMYwxiby8SM6TnPNoAXLTijbHd\', \'2023-12-26\');')
+ 4 APPPATH\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$Do/kzXiKNvZtjnv3r2Pkwu5HaE4AlZ1hv9AlnLjSiRfXeOa6IwLzC\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'iW45xyEMYwxiby8SM6TnPNoAXLTijbHd\', \'2023-12-26\');')
+ 5 APPPATH\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'iW45xyEMYwxiby8SM6TnPNoAXLTijbHd')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-26 03:51:17 --> Controlador Contra:aaa
+ERROR - 2023-12-26 03:51:17 --> mysqli_sql_exception: Unknown column 'Valido' in 'field list' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'xe05RjgCc6wTdVy...')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-26 03:51:17 --> Unknown column 'Valido' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$m98l.yz7wJtAl/cV82dxTu./uFxPUpfHj2/oH2Wu7eUeb/pKqCu2G\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'xe05RjgCc6wTdVymASZzL57NXpTgjmt1\', \'2023-12-26\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$m98l.yz7wJtAl/cV82dxTu./uFxPUpfHj2/oH2Wu7eUeb/pKqCu2G\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'xe05RjgCc6wTdVymASZzL57NXpTgjmt1\', \'2023-12-26\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$m98l.yz7wJtAl/cV82dxTu./uFxPUpfHj2/oH2Wu7eUeb/pKqCu2G\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'xe05RjgCc6wTdVymASZzL57NXpTgjmt1\', \'2023-12-26\');')
+ 4 APPPATH\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$m98l.yz7wJtAl/cV82dxTu./uFxPUpfHj2/oH2Wu7eUeb/pKqCu2G\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'xe05RjgCc6wTdVymASZzL57NXpTgjmt1\', \'2023-12-26\');')
+ 5 APPPATH\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'xe05RjgCc6wTdVymASZzL57NXpTgjmt1')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-26 03:51:17 --> Controlador Contra:aaa
+ERROR - 2023-12-26 03:51:17 --> mysqli_sql_exception: Unknown column 'Valido' in 'field list' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', '4U2AcY3yhzKsAmZ...')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-26 03:51:17 --> Unknown column 'Valido' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$vMu1kYfFu5Utheo6sVmnM.264lnUCPFKr/j4Egi8MQBhcZSEhmXv6\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'4U2AcY3yhzKsAmZ5dZnGV9rnitSLc79w\', \'2023-12-26\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$vMu1kYfFu5Utheo6sVmnM.264lnUCPFKr/j4Egi8MQBhcZSEhmXv6\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'4U2AcY3yhzKsAmZ5dZnGV9rnitSLc79w\', \'2023-12-26\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$vMu1kYfFu5Utheo6sVmnM.264lnUCPFKr/j4Egi8MQBhcZSEhmXv6\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'4U2AcY3yhzKsAmZ5dZnGV9rnitSLc79w\', \'2023-12-26\');')
+ 4 APPPATH\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$vMu1kYfFu5Utheo6sVmnM.264lnUCPFKr/j4Egi8MQBhcZSEhmXv6\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'4U2AcY3yhzKsAmZ5dZnGV9rnitSLc79w\', \'2023-12-26\');')
+ 5 APPPATH\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', '4U2AcY3yhzKsAmZ5dZnGV9rnitSLc79w')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-26 03:51:17 --> Controlador Contra:aaa
+ERROR - 2023-12-26 03:51:17 --> mysqli_sql_exception: Unknown column 'Valido' in 'field list' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'G8FQjf3J0wG3l5c...')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-26 03:51:17 --> Unknown column 'Valido' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$DVe3/Br15sahvdkG6T43Au2OYUCedLzbhKKFwqQmO4IjlKYYxmRGO\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'G8FQjf3J0wG3l5cYt1YmPPxXvhOMB8OW\', \'2023-12-26\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$DVe3/Br15sahvdkG6T43Au2OYUCedLzbhKKFwqQmO4IjlKYYxmRGO\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'G8FQjf3J0wG3l5cYt1YmPPxXvhOMB8OW\', \'2023-12-26\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$DVe3/Br15sahvdkG6T43Au2OYUCedLzbhKKFwqQmO4IjlKYYxmRGO\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'G8FQjf3J0wG3l5cYt1YmPPxXvhOMB8OW\', \'2023-12-26\');')
+ 4 APPPATH\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$DVe3/Br15sahvdkG6T43Au2OYUCedLzbhKKFwqQmO4IjlKYYxmRGO\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'G8FQjf3J0wG3l5cYt1YmPPxXvhOMB8OW\', \'2023-12-26\');')
+ 5 APPPATH\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'G8FQjf3J0wG3l5cYt1YmPPxXvhOMB8OW')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-26 03:51:17 --> Controlador Contra:aaa
+ERROR - 2023-12-26 03:51:17 --> mysqli_sql_exception: Unknown column 'Valido' in 'field list' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'hNlQu345zGPilF1...')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-26 03:51:17 --> Unknown column 'Valido' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$Jbz1LnOK/fFFsFESZBcLj.wFVW/xLHF1LEwSD6Q7kXvfLbKArv7Ga\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'hNlQu345zGPilF1zXeaXTBoZFdA6NGzJ\', \'2023-12-26\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$Jbz1LnOK/fFFsFESZBcLj.wFVW/xLHF1LEwSD6Q7kXvfLbKArv7Ga\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'hNlQu345zGPilF1zXeaXTBoZFdA6NGzJ\', \'2023-12-26\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$Jbz1LnOK/fFFsFESZBcLj.wFVW/xLHF1LEwSD6Q7kXvfLbKArv7Ga\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'hNlQu345zGPilF1zXeaXTBoZFdA6NGzJ\', \'2023-12-26\');')
+ 4 APPPATH\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$Jbz1LnOK/fFFsFESZBcLj.wFVW/xLHF1LEwSD6Q7kXvfLbKArv7Ga\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'hNlQu345zGPilF1zXeaXTBoZFdA6NGzJ\', \'2023-12-26\');')
+ 5 APPPATH\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'hNlQu345zGPilF1zXeaXTBoZFdA6NGzJ')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-26 03:51:17 --> Controlador Contra:aaa
+ERROR - 2023-12-26 03:51:17 --> mysqli_sql_exception: Unknown column 'Valido' in 'field list' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', '5NFYQ9KtKoI9Ps9...')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-26 03:51:17 --> Unknown column 'Valido' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$LtwB0WecN/8Y.zJlNAhe2e0RNELbbr11qp758ToSPz5Wl9nACyPW2\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'5NFYQ9KtKoI9Ps9NqUWfFhetQe27qQJD\', \'2023-12-26\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$LtwB0WecN/8Y.zJlNAhe2e0RNELbbr11qp758ToSPz5Wl9nACyPW2\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'5NFYQ9KtKoI9Ps9NqUWfFhetQe27qQJD\', \'2023-12-26\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$LtwB0WecN/8Y.zJlNAhe2e0RNELbbr11qp758ToSPz5Wl9nACyPW2\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'5NFYQ9KtKoI9Ps9NqUWfFhetQe27qQJD\', \'2023-12-26\');')
+ 4 APPPATH\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$LtwB0WecN/8Y.zJlNAhe2e0RNELbbr11qp758ToSPz5Wl9nACyPW2\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'5NFYQ9KtKoI9Ps9NqUWfFhetQe27qQJD\', \'2023-12-26\');')
+ 5 APPPATH\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', '5NFYQ9KtKoI9Ps9NqUWfFhetQe27qQJD')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-26 03:51:17 --> Controlador Contra:aaa
+ERROR - 2023-12-26 03:51:18 --> mysqli_sql_exception: Unknown column 'Valido' in 'field list' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'dsx4UNEfMBSHEoA...')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+INFO - 2023-12-26 03:51:18 --> Controlador Contra:aaa
+CRITICAL - 2023-12-26 03:51:18 --> Unknown column 'Valido' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$vZcBvud4tC8dk.vAkBMra.34XfcE4Tvq5Ovee2jaVefKU2Byg5nNO\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'dsx4UNEfMBSHEoAjyEGDQR7x2FwSbzVt\', \'2023-12-26\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$vZcBvud4tC8dk.vAkBMra.34XfcE4Tvq5Ovee2jaVefKU2Byg5nNO\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'dsx4UNEfMBSHEoAjyEGDQR7x2FwSbzVt\', \'2023-12-26\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$vZcBvud4tC8dk.vAkBMra.34XfcE4Tvq5Ovee2jaVefKU2Byg5nNO\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'dsx4UNEfMBSHEoAjyEGDQR7x2FwSbzVt\', \'2023-12-26\');')
+ 4 APPPATH\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$vZcBvud4tC8dk.vAkBMra.34XfcE4Tvq5Ovee2jaVefKU2Byg5nNO\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'dsx4UNEfMBSHEoAjyEGDQR7x2FwSbzVt\', \'2023-12-26\');')
+ 5 APPPATH\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'dsx4UNEfMBSHEoAjyEGDQR7x2FwSbzVt')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-26 03:51:18 --> mysqli_sql_exception: Unknown column 'Valido' in 'field list' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'VjhEJAyWuYaAx2c...')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-26 03:51:18 --> Unknown column 'Valido' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$PVvk.E1L.6zWPczzaf2SeuIDWo4oNTHJ6EbPSB1jie9ccmCEC0Dsu\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'VjhEJAyWuYaAx2coMLDaJGLUqwHzNykP\', \'2023-12-26\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$PVvk.E1L.6zWPczzaf2SeuIDWo4oNTHJ6EbPSB1jie9ccmCEC0Dsu\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'VjhEJAyWuYaAx2coMLDaJGLUqwHzNykP\', \'2023-12-26\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$PVvk.E1L.6zWPczzaf2SeuIDWo4oNTHJ6EbPSB1jie9ccmCEC0Dsu\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'VjhEJAyWuYaAx2coMLDaJGLUqwHzNykP\', \'2023-12-26\');')
+ 4 APPPATH\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$PVvk.E1L.6zWPczzaf2SeuIDWo4oNTHJ6EbPSB1jie9ccmCEC0Dsu\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'VjhEJAyWuYaAx2coMLDaJGLUqwHzNykP\', \'2023-12-26\');')
+ 5 APPPATH\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'VjhEJAyWuYaAx2coMLDaJGLUqwHzNykP')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-26 03:51:18 --> Controlador Contra:aaa
+ERROR - 2023-12-26 03:51:18 --> mysqli_sql_exception: Unknown column 'Valido' in 'field list' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', '6BprAumRof0aIt3...')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-26 03:51:18 --> Unknown column 'Valido' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$Ejr5Vst0sHQpYPtabkDhhesUY3umWJ7o.pzNqyYQ9rYY2ecNfatWy\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'6BprAumRof0aIt32y8Q5A4pcukT06FwW\', \'2023-12-26\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$Ejr5Vst0sHQpYPtabkDhhesUY3umWJ7o.pzNqyYQ9rYY2ecNfatWy\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'6BprAumRof0aIt32y8Q5A4pcukT06FwW\', \'2023-12-26\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$Ejr5Vst0sHQpYPtabkDhhesUY3umWJ7o.pzNqyYQ9rYY2ecNfatWy\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'6BprAumRof0aIt32y8Q5A4pcukT06FwW\', \'2023-12-26\');')
+ 4 APPPATH\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$Ejr5Vst0sHQpYPtabkDhhesUY3umWJ7o.pzNqyYQ9rYY2ecNfatWy\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'6BprAumRof0aIt32y8Q5A4pcukT06FwW\', \'2023-12-26\');')
+ 5 APPPATH\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', '6BprAumRof0aIt32y8Q5A4pcukT06FwW')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-26 03:51:18 --> Controlador Contra:aaa
+ERROR - 2023-12-26 03:51:18 --> mysqli_sql_exception: Unknown column 'Valido' in 'field list' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'aXn6iMDpMSK9mWH...')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-26 03:51:18 --> Unknown column 'Valido' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$bG/z89KAm.5qjYPjIqgrfe4MUL5ssV3a349JNhVcpJCQuMRa2yKqG\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'aXn6iMDpMSK9mWH7kIg2Iihehwer7kZp\', \'2023-12-26\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$bG/z89KAm.5qjYPjIqgrfe4MUL5ssV3a349JNhVcpJCQuMRa2yKqG\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'aXn6iMDpMSK9mWH7kIg2Iihehwer7kZp\', \'2023-12-26\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$bG/z89KAm.5qjYPjIqgrfe4MUL5ssV3a349JNhVcpJCQuMRa2yKqG\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'aXn6iMDpMSK9mWH7kIg2Iihehwer7kZp\', \'2023-12-26\');')
+ 4 APPPATH\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$bG/z89KAm.5qjYPjIqgrfe4MUL5ssV3a349JNhVcpJCQuMRa2yKqG\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'aXn6iMDpMSK9mWH7kIg2Iihehwer7kZp\', \'2023-12-26\');')
+ 5 APPPATH\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', 'aXn6iMDpMSK9mWH7kIg2Iihehwer7kZp')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-26 03:51:18 --> Controlador Contra:aaa
+ERROR - 2023-12-26 03:51:18 --> mysqli_sql_exception: Unknown column 'Valido' in 'field list' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', '7Z2XFQ1VUpCcLVk...')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-26 03:51:18 --> Unknown column 'Valido' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$idBkaMH.jibgtO0cRBBJv.j4.7LxiZHSq6F4nBU3DUVeBzmLMPXta\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'7Z2XFQ1VUpCcLVkrlBGNnD3romlMHqtm\', \'2023-12-26\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$idBkaMH.jibgtO0cRBBJv.j4.7LxiZHSq6F4nBU3DUVeBzmLMPXta\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'7Z2XFQ1VUpCcLVkrlBGNnD3romlMHqtm\', \'2023-12-26\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$idBkaMH.jibgtO0cRBBJv.j4.7LxiZHSq6F4nBU3DUVeBzmLMPXta\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'7Z2XFQ1VUpCcLVkrlBGNnD3romlMHqtm\', \'2023-12-26\');')
+ 4 APPPATH\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$idBkaMH.jibgtO0cRBBJv.j4.7LxiZHSq6F4nBU3DUVeBzmLMPXta\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'23424\', \'2023-12-14\', 0, \'7Z2XFQ1VUpCcLVkrlBGNnD3romlMHqtm\', \'2023-12-26\');')
+ 5 APPPATH\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '23424', '2023-12-14', '7Z2XFQ1VUpCcLVkrlBGNnD3romlMHqtm')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-26 03:56:18 --> Controlador Contra:aaa
+ERROR - 2023-12-26 03:56:18 --> mysqli_sql_exception: Unknown column 'Valido' in 'field list' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '213', '2023-12-13', '8FmcHxg8NJx3imx...')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-26 03:56:18 --> Unknown column 'Valido' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$PQdtvYpan2xpZWAkmJscNumu3thf2XLR46hT/18syXJDIzjyLxLzG\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'213\', \'2023-12-13\', 0, \'8FmcHxg8NJx3imx1iphkyGseb0SWJVG3\', \'2023-12-26\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$PQdtvYpan2xpZWAkmJscNumu3thf2XLR46hT/18syXJDIzjyLxLzG\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'213\', \'2023-12-13\', 0, \'8FmcHxg8NJx3imx1iphkyGseb0SWJVG3\', \'2023-12-26\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$PQdtvYpan2xpZWAkmJscNumu3thf2XLR46hT/18syXJDIzjyLxLzG\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'213\', \'2023-12-13\', 0, \'8FmcHxg8NJx3imx1iphkyGseb0SWJVG3\', \'2023-12-26\');')
+ 4 APPPATH\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$PQdtvYpan2xpZWAkmJscNumu3thf2XLR46hT/18syXJDIzjyLxLzG\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'213\', \'2023-12-13\', 0, \'8FmcHxg8NJx3imx1iphkyGseb0SWJVG3\', \'2023-12-26\');')
+ 5 APPPATH\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '213', '2023-12-13', '8FmcHxg8NJx3imx1iphkyGseb0SWJVG3')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-26 04:24:19 --> Controlador Contra:aaa
+ERROR - 2023-12-26 04:24:19 --> mysqli_sql_exception: Unknown column 'Valido' in 'field list' in C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\appweb\app\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\xampp\htdocs\appweb\app\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '213213213', '2023-12-20', 'p4fAeHNFXrNrwqZ...')
+#5 C:\xampp\htdocs\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\xampp\htdocs\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-26 04:24:19 --> Unknown column 'Valido' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$KrsoHgsRbzpsQqasy6QCSuRImAin1ecD6vUZsM1MmQ4bxz4Xv73e6\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'213213213\', \'2023-12-20\', 0, \'p4fAeHNFXrNrwqZDSCL10F4MY1Mo1SUp\', \'2023-12-26\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$KrsoHgsRbzpsQqasy6QCSuRImAin1ecD6vUZsM1MmQ4bxz4Xv73e6\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'213213213\', \'2023-12-20\', 0, \'p4fAeHNFXrNrwqZDSCL10F4MY1Mo1SUp\', \'2023-12-26\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$KrsoHgsRbzpsQqasy6QCSuRImAin1ecD6vUZsM1MmQ4bxz4Xv73e6\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'213213213\', \'2023-12-20\', 0, \'p4fAeHNFXrNrwqZDSCL10F4MY1Mo1SUp\', \'2023-12-26\');')
+ 4 APPPATH\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aaa\', \'aaa@aaa.com\', \'$2y$10$KrsoHgsRbzpsQqasy6QCSuRImAin1ecD6vUZsM1MmQ4bxz4Xv73e6\', \'aaa\', \'aaa\', \'aaa 123\', \'1\', \'213213213\', \'2023-12-20\', 0, \'p4fAeHNFXrNrwqZDSCL10F4MY1Mo1SUp\', \'2023-12-26\');')
+ 5 APPPATH\Controllers\Home.php(60): App\Models\HomeModel->registrar_usuario('aaa', 'aaa@aaa.com', 'aaa', 'aaa', 'aaa', 'aaa 123', '1', '213213213', '2023-12-20', 'p4fAeHNFXrNrwqZDSCL10F4MY1Mo1SUp')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-26 04:32:02 --> Controlador Contra:aaa
+INFO - 2023-12-26 04:32:23 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-26 04:34:54 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+CRITICAL - 2023-12-26 04:34:55 --> Array to string conversion
+in APPPATH\Views\homepage.php on line 3.
+ 1 APPPATH\Views\homepage.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\appweb\\app\\Views\\homepage.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\appweb\\app\\Views\\homepage.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('homepage', [], true)
+ 5 APPPATH\Controllers\Home.php(28): view('homepage')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->homepage()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-26 05:40:33 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-26 05:41:31 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-26 05:58:28 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-26 07:25:05 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';
+INFO - 2023-12-26 17:09:59 --> SELECT Contrasena FROM `usuario` WHERE Email='aaa@aaa.com';

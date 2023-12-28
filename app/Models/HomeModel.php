@@ -93,4 +93,80 @@ class HomeModel extends Model{
         return FALSE;
     }
 
+    public function get_usuario($usuario){
+        $sql = "SELECT * FROM `usuario` WHERE Usuario='$usuario';";
+        $query = $this->db->query($sql);
+        $result = $query->getResult();
+
+        if(count($result)>=1){
+            return $result;
+        }else{
+            return null;
+        }
+    }
+
+    public function update_usuario($usuario, $email, $contrasena1, $nombre, $apellido, $direccion, $genero, $telefono, $nacimiento, $token){
+        $current_user = $_COOKIE["cookie_usuario"];
+        
+        if($email!=null && $contrasena1!=null){
+            $contrasena = password_hash($contrasena1, PASSWORD_BCRYPT);
+            $currentDate = date('Y-m-d');
+            $sql = "UPDATE `usuario` SET Usuario='$usuario', Email='$email', Contrasena='$contrasena', Nombre='$nombre', Apellido='$apellido', Direccion='$direccion', Genero=$genero, Telefono=$telefono, Nacimiento='$nacimiento', Token='$token' WHERE Usuario='$current_user';";
+        }else if($email==null && $contrasena1!=null){
+            $contrasena = password_hash($contrasena1, PASSWORD_BCRYPT);
+            $sql = "UPDATE `usuario` SET Usuario='$usuario', Contrasena='$contrasena', Nombre='$nombre', Apellido='$apellido', Direccion='$direccion', Genero=$genero, Telefono=$telefono, Nacimiento='$nacimiento' WHERE Usuario='$current_user';";
+        }else if($email!=null && $contrasena1==null){
+            $currentDate = date('Y-m-d');
+            $sql = "UPDATE `usuario` SET Usuario='$usuario', Email='$email', Nombre='$nombre', Apellido='$apellido', Direccion='$direccion', Genero=$genero, Telefono=$telefono, Nacimiento='$nacimiento', Token='$token' WHERE Usuario='$current_user';";
+        }else if($email==null && $contrasena1==null){
+            $sql = "UPDATE `usuario` SET Usuario='$usuario', Nombre='$nombre', Apellido='$apellido', Direccion='$direccion', Genero=$genero, Telefono=$telefono, Nacimiento='$nacimiento' WHERE Usuario='$current_user';";
+        }else{
+            log_message("info","Error en update: email, pass");
+            return false;
+        }
+
+        $query = $this->db->query($sql);
+        if($query){
+            return TRUE;
+        }else{
+            log_message("info","Error en update");
+            return FALSE;
+        }
+
+    }
+
+    public function agregar_pelicula($pelicula, $usuario){
+        $sql = "INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES ('$pelicula', '$usuario');";
+        $query = $this->db->query($sql);
+
+        if($query){
+            return TRUE;
+        }else{
+            return FALSE;
+        }
+    }
+
+    public function consultar_pelicula($usuario){
+        $sql = "SELECT * FROM `biblioteca` WHERE Usuario='$usuario';";
+        $query = $this->db->query($sql);
+        $result = $query->getResult();
+
+        if(count($result)>=1){
+            return $result;
+        }else{
+            return NULL;
+        }
+    }
+
+    public function borrar_pelicula($pelicula, $usuario){
+        $sql = "DELETE FROM `biblioteca` WHERE Pelicula='$pelicula' AND Usuario='$usuario';";
+        $query = $this->db->query($sql);
+
+        if($query){
+            return TRUE;
+        }else{
+            return FALSE;
+        }
+    }
+
 }

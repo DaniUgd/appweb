@@ -34,11 +34,8 @@ header a:active{
     font-weight: bold;
 }
 
-nav{
-    text-align: right;
-}
-nav a{
-    text-decoration: none;
+.Error{
+    color: red;
 }
 
 #section_buscar{
@@ -63,6 +60,27 @@ nav a{
     opacity: 0;
     visibility: hidden;
 } */
+
+.datos{
+    display: flex;
+    align-items: baseline;
+    margin-left: 15px;
+}
+.etiquetas{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+.etiquetas label{
+    height: 20px;
+}
+.entradas{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 250px;
+}
 
 
 aside a{
