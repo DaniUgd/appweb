@@ -24,3 +24,112 @@ in APPPATH\Models\HomeModel.php on line 121.
  6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 INFO - 2023-12-28 03:42:46 --> SELECT Contrasena FROM `usuario` WHERE Email='lurikoan@gmail.com';
 INFO - 2023-12-28 03:42:56 --> PelisPlus, Cuevana: 539738 user: MirkoCzajka
+CRITICAL - 2023-12-28 05:00:50 --> syntax error, unexpected variable "$query3"
+in APPPATH\Models\HomeModel.php on line 87.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\HomeModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\HomeModel')
+ 4 SYSTEMPATH\Config\Factories.php(155): class_exists('App\\Models\\HomeModel')
+ 5 SYSTEMPATH\Config\Factories.php(125): CodeIgniter\Config\Factories::locateClass([...], 'HomeModel')
+ 6 SYSTEMPATH\Config\Factories.php(86): CodeIgniter\Config\Factories::__callStatic('models', [...])
+ 7 SYSTEMPATH\Common.php(829): CodeIgniter\Config\Factories::models('HomeModel', [...], null)
+ 8 APPPATH\Controllers\Home.php(12): model('HomeModel')
+ 9 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+10 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-28 05:08:41 --> syntax error, unexpected token ";"
+in APPPATH\Models\HomeModel.php on line 89.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\HomeModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\HomeModel')
+ 4 SYSTEMPATH\Config\Factories.php(155): class_exists('App\\Models\\HomeModel')
+ 5 SYSTEMPATH\Config\Factories.php(125): CodeIgniter\Config\Factories::locateClass([...], 'HomeModel')
+ 6 SYSTEMPATH\Config\Factories.php(86): CodeIgniter\Config\Factories::__callStatic('models', [...])
+ 7 SYSTEMPATH\Common.php(829): CodeIgniter\Config\Factories::models('HomeModel', [...], null)
+ 8 APPPATH\Controllers\Home.php(12): model('HomeModel')
+ 9 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+10 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-28 05:09:58 --> syntax error, unexpected token ";"
+in APPPATH\Models\HomeModel.php on line 89.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\HomeModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\HomeModel')
+ 4 SYSTEMPATH\Config\Factories.php(155): class_exists('App\\Models\\HomeModel')
+ 5 SYSTEMPATH\Config\Factories.php(125): CodeIgniter\Config\Factories::locateClass([...], 'HomeModel')
+ 6 SYSTEMPATH\Config\Factories.php(86): CodeIgniter\Config\Factories::__callStatic('models', [...])
+ 7 SYSTEMPATH\Common.php(829): CodeIgniter\Config\Factories::models('HomeModel', [...], null)
+ 8 APPPATH\Controllers\Home.php(12): model('HomeModel')
+ 9 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+10 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-28 05:12:23 --> syntax error, unexpected token ";"
+in APPPATH\Models\HomeModel.php on line 88.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\HomeModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\HomeModel')
+ 4 SYSTEMPATH\Config\Factories.php(155): class_exists('App\\Models\\HomeModel')
+ 5 SYSTEMPATH\Config\Factories.php(125): CodeIgniter\Config\Factories::locateClass([...], 'HomeModel')
+ 6 SYSTEMPATH\Config\Factories.php(86): CodeIgniter\Config\Factories::__callStatic('models', [...])
+ 7 SYSTEMPATH\Common.php(829): CodeIgniter\Config\Factories::models('HomeModel', [...], null)
+ 8 APPPATH\Controllers\Home.php(12): model('HomeModel')
+ 9 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+10 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-28 05:50:44 --> syntax error, unexpected token ","
+in APPPATH\Controllers\Home.php on line 357.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-28 06:06:45 --> syntax error, unexpected token ","
+in APPPATH\Controllers\Home.php on line 357.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-28 06:12:47 --> syntax error, unexpected token ","
+in APPPATH\Controllers\Home.php on line 374.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-28 06:14:09 --> SELECT Contrasena FROM `usuario` WHERE Email='mirko@gmail.com';
+INFO - 2023-12-28 06:15:41 --> Controlador Contra:2323
+INFO - 2023-12-28 06:16:41 --> SELECT Contrasena FROM `usuario` WHERE Email='prueba@vencido.com';
+CRITICAL - 2023-12-28 06:16:41 --> Call to a member function date_modify() on string
+in APPPATH\Models\HomeModel.php on line 88.
+ 1 APPPATH\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('prueba@vencido.com', '2323')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-28 06:20:20 --> SELECT Contrasena FROM `usuario` WHERE Email='prueba@vencido.com';
+CRITICAL - 2023-12-28 06:20:20 --> Call to a member function modify() on string
+in APPPATH\Models\HomeModel.php on line 88.
+ 1 APPPATH\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('prueba@vencido.com', '2323')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-28 06:20:33 --> SELECT Contrasena FROM `usuario` WHERE Email='prueba@vencido.com';
+CRITICAL - 2023-12-28 06:20:34 --> Call to a member function modify() on string
+in APPPATH\Models\HomeModel.php on line 88.
+ 1 APPPATH\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('prueba@vencido.com', '2323')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

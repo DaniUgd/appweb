@@ -130,19 +130,33 @@ class Home extends BaseController{
         $email = $this->request->getPost('email');
         $contrasena = $this->request->getPost('contrasena');
     
-        $result = $this->modelHome->validar_inicio($email, $contrasena);
-        if($result){
+        $datos = $this->modelHome->validar_inicio($email, $contrasena);
+        if($datos['valid']){
             $this->response->setCookie("cookie_usuario",
-                                        $value = $result,
+                                        $value = $datos['usuario'],
                                         $expire = new DateTime('+12 hours'),
                                         $domain = '',
                                         $path = '/',
                                         $prefix = '',
                                         $secure = false,
                                         $httponly = false,);
+            return json_encode($datos['usuario']);
+        }else{
+            if($datos['usuario']!=null){
+                $this->response->setCookie("cookie_usuario",
+                                            $value = $datos['usuario'],
+                                            $expire = new DateTime('+12 hours'),
+                                            $domain = '',
+                                            $path = '/',
+                                            $prefix = '',
+                                            $secure = false,
+                                            $httponly = false,);
+                return json_encode('000');
+            }else{
+                return json_encode('111');
+            }
         }
 
-        return json_encode($result);
     }
 
     public function cerrar_sesion(){
@@ -347,6 +361,41 @@ class Home extends BaseController{
 
         $this->response->setContentType("application/json");
         return $this->response->setJSON( [ "stateResult" => $result] );
+    }
+
+    public function resend_email(){
+        $token = $this->request->getPost('token');
+        $datos = $this->modelHome->get_datos_reenvio_correo($token);
+        $res_envio_correo = $this->enviar_confirmacion($datos['email'], $datos['nombre'], $datos['apellido'], $token);
+        
+        if($res_envio_correo){
+            return json_encode(true);
+        }else{
+            log_message("info","Error en update de token (controlador resend)");
+            return json_encode(false);
+        }
+    }
+
+    public function change_email(){
+        $correo = $this->request->getPost('correo');
+        $token = $this->request->getPost('token');
+
+        $result_update_correo = $this->modelHome->update_correo($correo);
+        
+        if($result_update_correo){
+            log_message("info","Hace el update del correo");
+            $datos = $this->modelHome->get_datos_reenvio_correo($token);
+            $res_envio_correo = $this->enviar_confirmacion($datos['email'], $datos['nombre'], $datos['apellido'], $token);
+            if($res_envio_correo){
+                return json_encode(true);
+            }else{
+                return json_encode(false);
+                log_message("info","Error en update de token (controlador change)");
+            }
+        }else{
+            return false;
+            log_message("info","Error en update de correo (controlador change)");
+        }
     }
 
 }

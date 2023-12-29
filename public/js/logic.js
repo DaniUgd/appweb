@@ -4,7 +4,6 @@ $(document).ready(function(){
 
     //Control registro usuario (no existencia del correo en base)
     $("#btn_crear").click(function(){
-        // console.log("VariablesNuevo1");
         let ing_usu = $("#nombre_usu").val();
         let ing_email = $("#email").val();
         let ing_pass = $("#pass").val();
@@ -127,31 +126,37 @@ $(document).ready(function(){
             success: function(dato){
                 console.log(dato);
                 if(dato){
-                    // console.log(dato);
-                    $("#txt_error_inicio_sesion").text("");
-                    window.location.href = base_url + "homepage";
+                    if(dato == '000'){
+                        $("#txt_error_inicio_sesion").text("");
+                        window.location.href = base_url + "cuenta_no_valida";
+                    }else if(dato == '111'){
+                        $("#txt_error_inicio_sesion").text("E-mail y/o Contraseña incorrectos");
+                        $("#txt_error_inicio_sesion").css("color","red");
+                    }else{
+                        $("#txt_error_inicio_sesion").text("");
+                        window.location.href = base_url + "homepage";
+                    }
                 }else{
-                    $("#txt_error_inicio_sesion").text("E-mail y/o Contraseña incorrectos");
-                    $("#txt_error_inicio_sesion").css("color","red");
+                    console.log("Error inicio sesion.")
                 }
             }
         })
     });
 
     //CUENTA NO VALIDA
-    $("#btn_reenviar_correo").click(function(){
-        console.log("btn_reenviar_correo");
-    });
+    // $("#btn_reenviar_correo").click(function(){
+    //     console.log("btn_reenviar_correo");
+    // });
 
-    $("#btn_cambiar_correo").click(function(){
-        console.log("btn_cambiar_correo");
-        let nuevo_mail = $("#email_reenvio").val();
-    });
+    // $("#btn_cambiar_correo").click(function(){
+    //     console.log("btn_cambiar_correo");
+    //     let nuevo_mail = $("#email_reenvio").val();
+    // });
 
     //MODIFICAR PERFIL
-    $("#btnGuardarCambios").click(function(){
-        console.log("btn_guardar_cambios");
-    });
+    // $("#btnGuardarCambios").click(function(){
+    //     console.log("btn_guardar_cambios");
+    // });
 
 });
 
@@ -203,7 +208,6 @@ function setEventClickCerrarSesion(){
 }
 
 function cerrarSesion(){
-    console.log("Axelisi");
     $.ajax({
         type: 'POST',
         url: base_url + 'home/cerrar_sesion',
@@ -289,10 +293,6 @@ function guardarModificarDatos(){
         ing_gen = 0;
     }
     
-    // console.log(hash_pass);
-    // console.log(valid_email);
-    // console.log(email);
-    // console.log(correo_actual);
     console.log(gen_masculino);
     console.log(ing_gen);
     if(email == correo_actual){
@@ -360,12 +360,12 @@ function guardarModificarDatos(){
 
 //Consultas de peliculas al servidor
 
-//document.getElementById("aBuscar").addEventListener("click", cargarRecommendedMovies());
-
 function cargarRecommendedMovies(){
 
-    //const spinner = document.getElementById('spinner');
-    //spinner.style.display = 'block';
+    const spinner = document.getElementById('spinner');
+    console.log(spinner);
+    spinner.style.display = 'block';
+    
     let containerRecommended = document.getElementById("container-recommended-movies");
 
     fetch(base_url + "home/consult_recomendadas", {
@@ -374,8 +374,6 @@ function cargarRecommendedMovies(){
 
     .then(res => res.json())
     .then(async result => {
-
-        //const moviePromises = result.data.map(async result => console.log(await getCommentsMovie(result.movie.ids.trakt)));
         
         const moviePromises = result.data.map(async result => itemMovie(result.movie, await getCommentsMovie(result.movie.ids.trakt)));
         const movies = await Promise.all(moviePromises);
@@ -386,7 +384,7 @@ function cargarRecommendedMovies(){
             fragmento.appendChild(movie);
         });
         containerRecommended.appendChild(fragmento);
-        //spinner.style.display = 'none';
+        spinner.style.display = 'none';
 
     })
     .catch(err => console.log(err));
@@ -434,7 +432,8 @@ function setEventToBtnFind(){
                 children[i].remove();
             }
             containerResultFind.appendChild(fragmento);
-            //spinner.style.display = 'none';
+            const spinner = document.getElementById('spinner');
+            spinner.style.display = 'none';
 
     });
 
@@ -459,7 +458,6 @@ function setEventToBtnFind(){
 
             const fragmento = document.createDocumentFragment();
             movies.forEach(movie => {
-                //console.log('-->'+movie);
                 movie.querySelector('#btn-addMovie').addEventListener('click', () => addMylibraryEventClick(movie.getAttribute("key")));
                 fragmento.appendChild(movie);
             });
@@ -469,7 +467,8 @@ function setEventToBtnFind(){
                 children[i].remove();
             }
             containerResultFind.appendChild(fragmento);
-            //spinner.style.display = 'none';
+            const spinner = document.getElementById('spinner');
+            spinner.style.display = 'none';
 
         });
 
@@ -480,8 +479,8 @@ function setEventToBtnFind(){
 
 function findMovie(name){
 
-    //const spinner = document.getElementById('spinner');
-    ///spinner.style.display = 'block';
+    const spinner = document.getElementById('spinner');
+    spinner.style.display = 'block';
 
     return new Promise((resolve, reject) => {
         //base_url +"home/consult_comentarioID?idMovie="+ id,
@@ -497,8 +496,8 @@ function findMovie(name){
 
 function consult_peliculaCATEGORIA(genre){
 
-    //const spinner = document.getElementById('spinner');
-    //spinner.style.display = 'block';
+    const spinner = document.getElementById('spinner');
+    spinner.style.display = 'block';
 
     return new Promise((resolve, reject) => {
 
@@ -697,4 +696,65 @@ function itemMovie(movie , comentarios){
 
    return itemMovie;
 
+}
+
+//CUENTA NO VALIDA: NO VERIFICADA EN TIEMPO
+
+function setEventClickReenviarCorreo(){
+    let btnReenviarCorreo = document.getElementById("btn_reenviar_correo");
+    btnReenviarCorreo.addEventListener("click", () => {
+        reenviar_correo();
+    });
+}
+function setEventClickCambiarCorreo(){    
+    let btnCambiarCorreo = document.getElementById("btn_cambiar_correo");
+    btnCambiarCorreo.addEventListener("click", () => {
+        cambiar_correo();
+    });
+}
+
+function reenviar_correo(){
+    console.log("reenviar");
+    let ing_token = generateToken(32);
+    $.ajax({
+        type: 'POST',
+        url: base_url + 'home/resend_email',
+        dataType: 'json',
+        data:{
+            token: ing_token
+        },
+        success: function(dato){
+            console.log("Entra aca");
+            if(dato){
+                console.log("Redirecciondo");
+                window.location.href = base_url;
+            }else{
+                console.log("Error en el reenvio de correo (js)");
+            }
+        }
+    });
+}
+
+function cambiar_correo(){
+    console.log("cambiar");
+    let correo = document.getElementById("email_reenvio").value;
+    console.log(correo);
+    let ing_token = generateToken(32);
+    $.ajax({
+        type: 'POST',
+        url: base_url + 'home/change_email',
+        dataType: 'json',
+        data:{
+            correo: correo,
+            token: ing_token
+        },
+        success: function(result){
+            if(result){
+                console.log("Redireccindo");
+                window.location.href = base_url;
+            }else{
+                console.log("Error en el cambio de correo (js)");
+            }
+        }
+    });
 }

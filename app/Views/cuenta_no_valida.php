@@ -30,7 +30,8 @@
     </header>
 
     <section id="section_cuenta_no_valida">
-        <label>Cuenta no válida</label>
+        <p>¡Hola <?php echo $_COOKIE["cookie_usuario"];?>! Tu cuenta excedió el tiempo para su validación.</p>
+        <p>Por favor, REENVIA el correo a la misma dirección para confirmarlo o CAMBIA de dirección.</p>
         <div id="opciones">
             <button id="btn_reenviar_correo">REENVIAR CORREO</button>
             <div id="reenvio_email">
@@ -47,5 +48,11 @@
         <span> - </span>
         <a href="https://campusvirtual.ugd.edu.ar/" target="_blank">Campus Virtual</a>
     </footer>
+    
+    <script>
+        setEventClickReenviarCorreo();
+        setEventClickCambiarCorreo();
+    </script>
+
 </body>
 </html>

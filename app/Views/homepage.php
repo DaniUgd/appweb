@@ -110,17 +110,19 @@
             </div>
         </div>
     </div>
-    
+ 
     <aside class="navbar navbar-expand-lg bg-body-tertiary bg-primary" data-bs-theme="dark">
-        <div class="container-fluid" class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
+
+        <div class="container-fluid collapse navbar-collapse" id="navbarNav">
+        
+            <ul class="navbar-nav justify-content-center">
+                <li class="nav-item me-4">
                     <a id="aBuscar" class="nav-link" aria-current="page" href="javascript:void(0);" onclick="display('buscar')">BUSCAR</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item me-4">
                     <a id="aRecomendadas" class="nav-link" href="javascript:void(0);" onclick="display('recomendadas')">RECOMENDADAS</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ">
                     <a id="aBiblioteca" class="nav-link" href="javascript:void(0);" onclick="display('biblioteca')">MI BIBLIOTECA</a>
                 </li>
             </ul>
@@ -129,6 +131,10 @@
     
     <section id="section_principal">
         
+        <div id="spinner" class="spinner-border text-primary mt-5 mx-auto" role="status" style="display: none;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+
         <section id="section_buscar" class="class_container">
             <p class="text-center fs-2 text-primary">BUSCAR UNA PELÍCULA</p>
             

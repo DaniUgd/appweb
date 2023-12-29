@@ -1,0 +1,182 @@
+INFO - 2023-12-29 00:41:27 --> SELECT Contrasena FROM `usuario` WHERE Email='prueba@vencido.com';
+INFO - 2023-12-29 00:41:27 --> 2023-10-31
+INFO - 2023-12-29 00:41:27 --> 2023-12-29
+CRITICAL - 2023-12-29 00:41:27 --> Call to a member function modify() on string
+in APPPATH\Models\HomeModel.php on line 90.
+ 1 APPPATH\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('prueba@vencido.com', '2323')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-29 00:48:25 --> SELECT Contrasena FROM `usuario` WHERE Email='prueba@vencido.com';
+CRITICAL - 2023-12-29 00:48:25 --> Call to a member function modify() on string
+in APPPATH\Models\HomeModel.php on line 88.
+ 1 APPPATH\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('prueba@vencido.com', '2323')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 00:50:47 --> syntax error, unexpected token ";", expecting ")"
+in APPPATH\Models\HomeModel.php on line 88.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\HomeModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\HomeModel')
+ 4 SYSTEMPATH\Config\Factories.php(155): class_exists('App\\Models\\HomeModel')
+ 5 SYSTEMPATH\Config\Factories.php(125): CodeIgniter\Config\Factories::locateClass([...], 'HomeModel')
+ 6 SYSTEMPATH\Config\Factories.php(86): CodeIgniter\Config\Factories::__callStatic('models', [...])
+ 7 SYSTEMPATH\Common.php(829): CodeIgniter\Config\Factories::models('HomeModel', [...], null)
+ 8 APPPATH\Controllers\Home.php(12): model('HomeModel')
+ 9 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+10 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-29 00:51:19 --> SELECT Contrasena FROM `usuario` WHERE Email='prueba@vencido.com';
+INFO - 2023-12-29 00:51:19 --> Fecha registro: 2023-12-01
+INFO - 2023-12-29 00:51:19 --> Fecha de hoy: 2023-12-29
+CRITICAL - 2023-12-29 00:51:19 --> Call to a member function modify() on string
+in APPPATH\Models\HomeModel.php on line 90.
+ 1 APPPATH\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('prueba@vencido.com', '2323')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-29 00:52:55 --> SELECT Contrasena FROM `usuario` WHERE Email='prueba@vencido.com';
+INFO - 2023-12-29 00:52:55 --> Fecha registro: 2023-12-01
+INFO - 2023-12-29 00:52:55 --> Fecha de hoy: 2023-12-29
+INFO - 2023-12-29 01:04:48 --> SELECT Contrasena FROM `usuario` WHERE Email='prueba@vencido.com';
+INFO - 2023-12-29 01:04:48 --> Fecha registro: 2023-12-01
+INFO - 2023-12-29 01:04:48 --> Fecha de hoy: 2023-12-29
+CRITICAL - 2023-12-29 01:04:48 --> Undefined variable $usuario_obj
+in APPPATH\Models\HomeModel.php on line 96.
+ 1 APPPATH\Models\HomeModel.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario_obj', 'C:\\xampp\\htdocs\\appweb\\app\\Models\\HomeModel.php', 96)
+ 2 APPPATH\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('prueba@vencido.com', '2323')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-29 01:06:34 --> SELECT Contrasena FROM `usuario` WHERE Email='prueba@vencido.com';
+INFO - 2023-12-29 01:06:35 --> Fecha registro: 2023-12-01
+INFO - 2023-12-29 01:06:35 --> Fecha de hoy: 2023-12-29
+CRITICAL - 2023-12-29 01:06:35 --> Undefined constant "App\Controllers\datos"
+in APPPATH\Controllers\Home.php on line 135.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-29 01:08:22 --> SELECT Contrasena FROM `usuario` WHERE Email='prueba@vencido.com';
+INFO - 2023-12-29 01:08:22 --> Fecha registro: 2023-12-01
+INFO - 2023-12-29 01:08:22 --> Fecha de hoy: 2023-12-29
+INFO - 2023-12-29 01:08:51 --> SELECT Contrasena FROM `usuario` WHERE Email='mirko@gmail.com';
+INFO - 2023-12-29 01:08:51 --> Fecha registro: 2024-01-27
+INFO - 2023-12-29 01:08:51 --> Fecha de hoy: 2023-12-29
+INFO - 2023-12-29 01:09:46 --> SELECT Contrasena FROM `usuario` WHERE Email='prueba@vencido.com';
+INFO - 2023-12-29 01:09:46 --> Fecha registro: 2023-12-01
+INFO - 2023-12-29 01:09:46 --> Fecha de hoy: 2023-12-29
+INFO - 2023-12-29 01:18:08 --> Obtuvo bien los datos
+INFO - 2023-12-29 01:18:10 --> Reenviado CASI bien
+INFO - 2023-12-29 01:21:33 --> Obtuvo bien los datos
+INFO - 2023-12-29 01:21:35 --> Reenviado CASI bien
+INFO - 2023-12-29 01:21:35 --> Reenviado bien
+INFO - 2023-12-29 01:23:03 --> Obtuvo bien los datos
+INFO - 2023-12-29 01:23:05 --> Reenviado CASI bien
+INFO - 2023-12-29 01:23:05 --> Reenviado bien
+INFO - 2023-12-29 01:25:03 --> Obtuvo bien los datos
+INFO - 2023-12-29 01:25:05 --> Reenviado CASI bien
+INFO - 2023-12-29 01:25:05 --> Reenviado bien
+INFO - 2023-12-29 01:29:47 --> SELECT Contrasena FROM `usuario` WHERE Email='prueba@vencido.com';
+INFO - 2023-12-29 01:29:47 --> Fecha registro: 2023-12-01
+INFO - 2023-12-29 01:29:47 --> Fecha de hoy: 2023-12-29
+INFO - 2023-12-29 01:30:51 --> SELECT Contrasena FROM `usuario` WHERE Email='prueba@vencido.com';
+INFO - 2023-12-29 01:30:51 --> Fecha registro: 2023-12-01
+INFO - 2023-12-29 01:30:51 --> Fecha de hoy: 2023-12-29
+INFO - 2023-12-29 01:41:12 --> Antes del update
+INFO - 2023-12-29 01:41:12 --> Ejecuta el update
+INFO - 2023-12-29 01:41:12 --> Hace el update del correo
+CRITICAL - 2023-12-29 01:41:12 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Home.php on line 376.
+ 1 APPPATH\Controllers\Home.php(376): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php', 376)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->change_email()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-29 01:42:55 --> Antes del update
+INFO - 2023-12-29 01:42:55 --> Ejecuta el update
+INFO - 2023-12-29 01:42:56 --> Hace el update del correo
+CRITICAL - 2023-12-29 01:42:56 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Home.php on line 376.
+ 1 APPPATH\Controllers\Home.php(376): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php', 376)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->change_email()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-29 01:46:10 --> Antes del update
+INFO - 2023-12-29 01:46:10 --> sql: UPDATE `usuario` SET Email='' WHERE Usuario='PruebaVencido';
+INFO - 2023-12-29 01:46:10 --> Ejecuta el update
+INFO - 2023-12-29 01:46:10 --> Hace el update del correo
+CRITICAL - 2023-12-29 01:46:10 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Home.php on line 376.
+ 1 APPPATH\Controllers\Home.php(376): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php', 376)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->change_email()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-29 01:46:59 --> Antes del update
+INFO - 2023-12-29 01:46:59 --> sql: UPDATE `usuario` SET Email='prueba2@gmail.com' WHERE Usuario='PruebaVencido';
+INFO - 2023-12-29 01:46:59 --> Ejecuta el update
+INFO - 2023-12-29 01:46:59 --> Hace el update del correo
+INFO - 2023-12-29 01:55:40 --> SELECT Contrasena FROM `usuario` WHERE Email='mirk';
+CRITICAL - 2023-12-29 01:55:40 --> Trying to access array offset on value of type bool
+in APPPATH\Controllers\Home.php on line 135.
+ 1 APPPATH\Controllers\Home.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type bool', 'C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-29 01:55:47 --> SELECT Contrasena FROM `usuario` WHERE Email='mirk';
+CRITICAL - 2023-12-29 01:55:47 --> Trying to access array offset on value of type bool
+in APPPATH\Controllers\Home.php on line 135.
+ 1 APPPATH\Controllers\Home.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type bool', 'C:\\xampp\\htdocs\\appweb\\app\\Controllers\\Home.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-29 02:01:08 --> SELECT Contrasena FROM `usuario` WHERE Email='';
+CRITICAL - 2023-12-29 02:01:08 --> CodeIgniter\Cookie\Cookie::__construct(): Argument #2 ($value) must be of type string, null given, called in C:\xampp\htdocs\appweb\system\HTTP\ResponseTrait.php on line 606
+in SYSTEMPATH\Cookie\Cookie.php on line 204.
+ 1 SYSTEMPATH\HTTP\ResponseTrait.php(606): CodeIgniter\Cookie\Cookie->__construct('cookie_usuario', null, [...])
+ 2 APPPATH\Controllers\Home.php(134): CodeIgniter\HTTP\Response->setCookie('cookie_usuario', null, Object(DateTime), '', '/', '', false, false)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-29 02:01:15 --> SELECT Contrasena FROM `usuario` WHERE Email='sdf';
+CRITICAL - 2023-12-29 02:01:15 --> CodeIgniter\Cookie\Cookie::__construct(): Argument #2 ($value) must be of type string, null given, called in C:\xampp\htdocs\appweb\system\HTTP\ResponseTrait.php on line 606
+in SYSTEMPATH\Cookie\Cookie.php on line 204.
+ 1 SYSTEMPATH\HTTP\ResponseTrait.php(606): CodeIgniter\Cookie\Cookie->__construct('cookie_usuario', null, [...])
+ 2 APPPATH\Controllers\Home.php(134): CodeIgniter\HTTP\Response->setCookie('cookie_usuario', null, Object(DateTime), '', '/', '', false, false)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-29 02:03:37 --> SELECT Contrasena FROM `usuario` WHERE Email='s';
+INFO - 2023-12-29 02:03:42 --> SELECT Contrasena FROM `usuario` WHERE Email='';
+INFO - 2023-12-29 02:03:59 --> SELECT Contrasena FROM `usuario` WHERE Email='mirko@gmail.com';
+INFO - 2023-12-29 02:04:05 --> SELECT Contrasena FROM `usuario` WHERE Email='mirko@gmail.com';
+INFO - 2023-12-29 02:04:05 --> Fecha registro: 2024-01-27
+INFO - 2023-12-29 02:04:05 --> Fecha de hoy: 2023-12-29
+INFO - 2023-12-29 03:39:19 --> SELECT Contrasena FROM `usuario` WHERE Email='prueba2@gmail.com';
+INFO - 2023-12-29 03:39:19 --> Fecha registro: 2023-12-01
+INFO - 2023-12-29 03:39:19 --> Fecha de hoy: 2023-12-29
+INFO - 2023-12-29 03:40:14 --> SELECT Contrasena FROM `usuario` WHERE Email='mirko@gmail.com';
+INFO - 2023-12-29 03:40:15 --> Fecha registro: 2024-01-27
+INFO - 2023-12-29 03:40:15 --> Fecha de hoy: 2023-12-29
+CRITICAL - 2023-12-29 04:11:09 --> unlink(C:\xampp\htdocs\appweb\writable\debugbar/debugbar_1703823003.532352.json): No such file or directory
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\appweb\\writable\\debugbar/debugbar_1703823003.532352.json): No such file or directory', 'C:\\xampp\\htdocs\\appweb\\system\\Debug\\Toolbar\\Collectors\\History.php', 76)
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(76): unlink('C:\\xampp\\htdocs\\appweb\\writable\\debugbar/debugbar_1703823003.532352.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(495): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1703823066.503607', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(474): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

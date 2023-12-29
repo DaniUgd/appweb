@@ -82,15 +82,23 @@ class HomeModel extends Model{
         $hash_obj = $query->getRow();
         if($hash_obj != null){
             if(password_verify($contrasena,$hash_obj->Contrasena)){
-                //log_message("info","Verifica: ".$contrasena." ".$hash_obj->Contrasena);
+                $sql_cuenta_validada = "SELECT FechaRegistro, Valido FROM `usuario` WHERE Email='$email';";
+                $query3 = $this->db->query($sql_cuenta_validada);
+                $usuario_obj2 = $query3->getRow();
+                log_message("info","Fecha registro: ".date('Y-m-d',strtotime($usuario_obj2->FechaRegistro."+ 1 month")));
+                log_message("info","Fecha de hoy: ".date('Y-m-d'));
                 $sql = "SELECT Usuario FROM `usuario` WHERE Email='$email';";
                 $query2 = $this->db->query($sql);
                 $usuario_obj = $query2->getRow();
-                return $usuario_obj->Usuario;
+                if(($usuario_obj2->Valido)==1 || (date('Y-m-d',strtotime($usuario_obj2->FechaRegistro."+ 1 month")))>=(date('Y-m-d'))){
+                    return array('valid'=>true, 'usuario'=>$usuario_obj->Usuario);
+                }else{
+                    return array('valid'=>false, 'usuario'=>$usuario_obj->Usuario);
+                }
             }
         }
 
-        return FALSE;
+        return array('valid'=>false, 'usuario'=>null);
     }
 
     public function get_usuario($usuario){
@@ -166,6 +174,41 @@ class HomeModel extends Model{
             return TRUE;
         }else{
             return FALSE;
+        }
+    }
+
+    public function get_datos_reenvio_correo($token){
+        $usuario = $_COOKIE["cookie_usuario"];
+        $sql = "SELECT Email, Nombre, Apellido, Token FROM `usuario` WHERE Usuario='$usuario';";
+        $query = $this->db->query($sql);
+        $usuario_obj = $query->getRow();
+        
+        if($usuario_obj->Email){
+            $sql_update_token = "UPDATE `usuario` SET Token='$token' WHERE Usuario='$usuario';";
+            $query = $this->db->query($sql_update_token);
+            if($query){
+                return array('email'=>$usuario_obj->Email, 'nombre'=>$usuario_obj->Nombre, 'apellido'=>$usuario_obj->Apellido);
+            }else{
+                log_message("info","Error en update de token (modelo)");
+                return null;
+            }
+        }else{
+            return null;
+        }
+    }
+
+    public function update_correo($correo){
+        $usuario = $_COOKIE["cookie_usuario"];
+        log_message("info","Antes del update");
+        $sql_update_correo = "UPDATE `usuario` SET Email='$correo' WHERE Usuario='$usuario';";
+        log_message("info","sql: ".$sql_update_correo);
+        $query = $this->db->query($sql_update_correo);
+        if($query){
+            log_message("info","Ejecuta el update");
+            return true;
+        }else{
+            log_message("info","Error en update de correo (modelo)");
+            return false;
         }
     }
 

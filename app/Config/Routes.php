@@ -63,6 +63,10 @@ $routes->post('home/insert_pelicula', 'Home::insert_pelicula');
 $routes->get('home/select_pelicula', 'Home::select_pelicula');
 $routes->delete('home/delete_pelicula', 'Home::delete_pelicula');
 
+//Cuenta no valida
+$routes->post('home/resend_email', 'Home::resend_email');
+$routes->post('home/change_email', 'Home::change_email');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
