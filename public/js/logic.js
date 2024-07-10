@@ -106,6 +106,33 @@ $(document).ready(function(){
             })
         }, 500);
     });
+    $("#nombre_usu").on("input",function(){
+        clearTimeout(timer);
+        timer = setTimeout(function() {
+            let ing_usuario = $("#nombre_usu").val();
+            console.log(ing_usuario);
+
+            $.ajax({
+                type: 'POST',
+                url: base_url + 'home/validar_usuario',
+                dataType: 'json',
+                data:{
+                    usuario: ing_usuario
+                },
+                success: function(dato){
+                    if(dato){
+                        $("#usuario_error_1").text("ERROR:");
+                        $("#usuario_error_2").text("Ya está registrado el usuario.");
+                        valid_usuario = false;
+                    }else{
+                        $("#usuario_error_1").text("");
+                        $("#usuario_error_2").text("");
+                        valid_usuario = true;
+                    }
+                }
+            })
+        }, 500);
+    });
 
 
     //INICIO DE SESIÓN
@@ -167,6 +194,9 @@ function generateToken(length) {
       token += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     return token;
+    
+    
+
 }
 
 //HOMEPAGE

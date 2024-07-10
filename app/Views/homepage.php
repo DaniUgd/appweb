@@ -9,7 +9,7 @@
         <title>VideoTrends</title>
         <meta charset="UTF-8">
         <meta name="description" content="Home Page VideoTrends">
-        <meta name="author" content="Mirko Czajkowski">
+        <meta name="author" content="Daniel Abraham">
         <meta http-equiv="refresh" content="1800">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -33,7 +33,7 @@
         <p>La <span class="negrita">biblioteca</span> de tus pelis!</p>
     </header>
 
-    <nav class="navbar" style="align-items=end;">
+    <nav class="navbar" style="align-items : 'end';">
         <div class="ms-auto ml-auto">
             <i class="bi bi-gear"></i>
             <a id="NombreUsuario" href="#" data-bs-toggle="offcanvas" data-bs-target="#menuLateral"> <?php echo $_COOKIE["cookie_usuario"];?> </a>

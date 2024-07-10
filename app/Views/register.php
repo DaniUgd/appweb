@@ -34,6 +34,8 @@
                 <div class="datos">
                     <div class="etiquetas">
                         <label for="nombre_usu">Nombre de Usuario*</label>
+                        <span id="usuario_error_1" class="Error"></span>
+                        
                         <br>
                         <label for="email">E-mail*</label>
                         <span id="email_error_1" class="Error"></span>
@@ -48,6 +50,7 @@
                             <input type="text" id="nombre_usu" placeholder="Usuario" required>
                             <span class="tooltiptext">Ingresar Usuario</span>
                         </div>
+                        <span id="usuario_error_2" class="Error"></span>
                         <br>
                         <div class="tooltip">
                             <input type="email" id="email" placeholder="Direccion@email.com" >

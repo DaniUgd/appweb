@@ -55,7 +55,6 @@ class Home extends BaseController{
             'nacimiento' => 'valid_date'
         ]);
         log_message("info","Controlador Contra:".$contrasena);
-
         if($validation->withRequest($this->request)->run()){
             $result = $this->modelHome->registrar_usuario($usuario, $email, $contrasena, $nombre, $apellido, $direccion, $genero, $telefono, $nacimiento, $token);
             
@@ -66,7 +65,7 @@ class Home extends BaseController{
 
             return json_encode($result && $correo);
         }else{
-            dd($validation->getErrors());
+            die($validation->getErrors());
         }
         
     }
@@ -74,8 +73,13 @@ class Home extends BaseController{
     public function validar_email(){
         $email = $this->request->getPost('email');
         $data = $this->modelHome->get_email($email);
-
         return json_encode($data);
+    }
+    public function validar_usuario(){
+        $usuario = $this->request->getPost('usuario');
+        $data = $this->modelHome->get_usuario($usuario);
+        return json_encode($data);
+
     }
 
     public function enviar_confirmacion($email, $nombre, $apellido, $token){
@@ -219,7 +223,7 @@ class Home extends BaseController{
     //GET https://api.trakt.tv/movies/popular?genres=action&limit=10&page=2  --> para obtener otras 10 peliculas distintas
     function consult_recomendadas(){
         $movie = $this->request->getVar("movie");
-        $url = 'https://api.trakt.tv/movies/trending?extended=full&&limit=12';
+        $url = 'https://api.trakt.tv/movies/trending?extended=full&&limit=10'; //aca se puede establecer el limite de pelicuals traidas
 
         $this->response->setContentType("application/json");
         return $this->response->setJSON($this->findMovie($url));
@@ -237,7 +241,7 @@ class Home extends BaseController{
 
     function consult_comentarioID(){
         $movie = $this->request->getVar("idMovie");
-        $url = 'https://api.trakt.tv/movies/'.urlencode($movie).'/comments/highest';
+        $url = 'https://api.trakt.tv/movies/'.urlencode($movie).'/comments/highest';  // se puede cambiar a lowest
        
         $this->response->setContentType("application/json");
         return $this->response->setJSON($this->findMovie($url));

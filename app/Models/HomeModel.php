@@ -17,6 +17,7 @@ class HomeModel extends Model{
             return NULL;
         }
     }
+    
 
     public function get_email($email){
         $sql = "SELECT * FROM `usuario` WHERE Email='$email';";

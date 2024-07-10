@@ -1,0 +1,1664 @@
+INFO - 2024-06-08 20:56:55 --> SELECT Contrasena FROM `usuario` WHERE Email='';
+ERROR - 2024-06-08 20:56:56 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrase...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\app\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrase...')
+#3 C:\tpFinal\appweb\app\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+#4 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#9 {main}
+CRITICAL - 2024-06-08 20:56:56 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrasena FROM `usuario` WHERE Email=\'\';')
+ 3 APPPATH\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 20:56:56 --> SELECT Contrasena FROM `usuario` WHERE Email='';
+ERROR - 2024-06-08 20:56:56 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrase...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\app\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrase...')
+#3 C:\tpFinal\appweb\app\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+#4 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#9 {main}
+CRITICAL - 2024-06-08 20:56:56 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrasena FROM `usuario` WHERE Email=\'\';')
+ 3 APPPATH\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 20:56:56 --> SELECT Contrasena FROM `usuario` WHERE Email='';
+ERROR - 2024-06-08 20:56:56 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrase...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\app\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrase...')
+#3 C:\tpFinal\appweb\app\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+#4 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#9 {main}
+CRITICAL - 2024-06-08 20:56:56 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrasena FROM `usuario` WHERE Email=\'\';')
+ 3 APPPATH\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 20:56:56 --> SELECT Contrasena FROM `usuario` WHERE Email='';
+ERROR - 2024-06-08 20:56:56 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrase...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\app\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrase...')
+#3 C:\tpFinal\appweb\app\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+#4 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#9 {main}
+CRITICAL - 2024-06-08 20:56:56 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrasena FROM `usuario` WHERE Email=\'\';')
+ 3 APPPATH\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 20:56:56 --> SELECT Contrasena FROM `usuario` WHERE Email='';
+ERROR - 2024-06-08 20:56:56 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrase...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\app\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrase...')
+#3 C:\tpFinal\appweb\app\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+#4 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#9 {main}
+CRITICAL - 2024-06-08 20:56:56 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrasena FROM `usuario` WHERE Email=\'\';')
+ 3 APPPATH\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 20:56:56 --> SELECT Contrasena FROM `usuario` WHERE Email='';
+ERROR - 2024-06-08 20:56:56 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrase...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\app\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrase...')
+#3 C:\tpFinal\appweb\app\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+#4 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#9 {main}
+CRITICAL - 2024-06-08 20:56:56 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrasena FROM `usuario` WHERE Email=\'\';')
+ 3 APPPATH\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 20:56:56 --> SELECT Contrasena FROM `usuario` WHERE Email='';
+ERROR - 2024-06-08 20:56:56 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrase...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\app\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrase...')
+#3 C:\tpFinal\appweb\app\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+#4 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#9 {main}
+CRITICAL - 2024-06-08 20:56:56 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\HomeModel.php(81): CodeIgniter\Database\BaseConnection->query('SELECT Contrasena FROM `usuario` WHERE Email=\'\';')
+ 3 APPPATH\Controllers\Home.php(133): App\Models\HomeModel->validar_inicio('', '')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->iniciar_sesion()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+ERROR - 2024-06-08 20:57:05 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel34...')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\app\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#3 C:\tpFinal\appweb\app\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel34...')
+#4 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#9 {main}
+CRITICAL - 2024-06-08 20:57:05 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `usuario` WHERE Email=\'abrahamdaniel346@gmail.com\';')
+ 3 APPPATH\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel346@gmail.com')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 20:57:45 --> Controlador Contra:DANI123
+ERROR - 2024-06-08 20:57:45 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#6 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#7 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#6 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#12 {main}
+CRITICAL - 2024-06-08 20:57:45 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `Usuario` = :Usuario:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', [...], null, 'usuario')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', [...], [...])
+ 6 APPPATH\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 20:57:48 --> Controlador Contra:DANI123
+ERROR - 2024-06-08 20:57:48 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#6 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#7 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#6 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#12 {main}
+CRITICAL - 2024-06-08 20:57:48 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `Usuario` = :Usuario:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', [...], null, 'usuario')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', [...], [...])
+ 6 APPPATH\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 20:57:49 --> Controlador Contra:DANI123
+ERROR - 2024-06-08 20:57:49 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#6 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#7 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#6 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#12 {main}
+CRITICAL - 2024-06-08 20:57:49 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `Usuario` = :Usuario:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', [...], null, 'usuario')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', [...], [...])
+ 6 APPPATH\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 20:57:49 --> Controlador Contra:DANI123
+ERROR - 2024-06-08 20:57:49 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#6 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#7 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#6 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#12 {main}
+CRITICAL - 2024-06-08 20:57:49 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `Usuario` = :Usuario:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', [...], null, 'usuario')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', [...], [...])
+ 6 APPPATH\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 20:57:49 --> Controlador Contra:DANI123
+ERROR - 2024-06-08 20:57:49 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#6 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#7 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#6 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#12 {main}
+CRITICAL - 2024-06-08 20:57:49 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `Usuario` = :Usuario:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', [...], null, 'usuario')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', [...], [...])
+ 6 APPPATH\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 20:57:49 --> Controlador Contra:DANI123
+ERROR - 2024-06-08 20:57:49 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#6 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#7 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#6 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#12 {main}
+CRITICAL - 2024-06-08 20:57:49 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `Usuario` = :Usuario:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', [...], null, 'usuario')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', [...], [...])
+ 6 APPPATH\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 20:57:49 --> Controlador Contra:DANI123
+ERROR - 2024-06-08 20:57:49 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#6 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#7 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#6 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#12 {main}
+CRITICAL - 2024-06-08 20:57:49 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `Usuario` = :Usuario:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', [...], null, 'usuario')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', [...], [...])
+ 6 APPPATH\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 20:57:51 --> Controlador Contra:DANI123
+ERROR - 2024-06-08 20:57:51 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#6 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#7 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#6 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#12 {main}
+CRITICAL - 2024-06-08 20:57:51 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `Usuario` = :Usuario:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', [...], null, 'usuario')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', [...], [...])
+ 6 APPPATH\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 20:57:51 --> Controlador Contra:DANI123
+ERROR - 2024-06-08 20:57:51 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#6 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#7 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#6 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#12 {main}
+CRITICAL - 2024-06-08 20:57:51 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `Usuario` = :Usuario:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', [...], null, 'usuario')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', [...], [...])
+ 6 APPPATH\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 20:58:39 --> Controlador Contra:DANI123
+ERROR - 2024-06-08 20:58:39 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#6 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#7 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', Array, NULL, 'usuario')
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', Array, Array)
+#6 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#12 {main}
+CRITICAL - 2024-06-08 20:58:39 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `Usuario` = :Usuario:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('dani', 'Usuario', [...], null, 'usuario')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani', [...], [...])
+ 6 APPPATH\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+ERROR - 2024-06-08 21:01:25 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel34...')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\app\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#3 C:\tpFinal\appweb\app\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel34...')
+#4 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#9 {main}
+CRITICAL - 2024-06-08 21:01:25 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `usuario` WHERE Email=\'abrahamdaniel346@gmail.com\';')
+ 3 APPPATH\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel346@gmail.com')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+ERROR - 2024-06-08 21:01:48 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel3')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\app\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#3 C:\tpFinal\appweb\app\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel3')
+#4 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#9 {main}
+CRITICAL - 2024-06-08 21:01:48 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `usuario` WHERE Email=\'abrahamdaniel3\';')
+ 3 APPPATH\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel3')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+ERROR - 2024-06-08 21:01:49 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel34...')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\app\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#3 C:\tpFinal\appweb\app\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel34...')
+#4 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#9 {main}
+CRITICAL - 2024-06-08 21:01:49 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `usuario` WHERE Email=\'abrahamdaniel346\';')
+ 3 APPPATH\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel346')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+ERROR - 2024-06-08 21:01:51 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel34...')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\app\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#3 C:\tpFinal\appweb\app\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel34...')
+#4 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#9 {main}
+CRITICAL - 2024-06-08 21:01:51 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `usuario` WHERE Email=\'abrahamdaniel346@\';')
+ 3 APPPATH\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel346@')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+ERROR - 2024-06-08 21:01:54 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel34...')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\app\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#3 C:\tpFinal\appweb\app\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel34...')
+#4 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#9 {main}
+CRITICAL - 2024-06-08 21:01:54 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `usuario` WHERE Email=\'abrahamdaniel346@gmail.com\';')
+ 3 APPPATH\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel346@gmail.com')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+ERROR - 2024-06-08 21:08:10 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel34...')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\app\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#3 C:\tpFinal\appweb\app\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel34...')
+#4 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#9 {main}
+CRITICAL - 2024-06-08 21:08:10 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\HomeModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `usuario` WHERE Email=\'abrahamdaniel346@gmail.com\';')
+ 3 APPPATH\Controllers\Home.php(76): App\Models\HomeModel->get_email('abrahamdaniel346@gmail.com')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->validar_email()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 21:08:47 --> Controlador Contra:dani123
+ERROR - 2024-06-08 21:08:47 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', Array, NULL, 'usuario')
+#6 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', Array, Array)
+#7 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', Array, NULL, 'usuario')
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', Array, Array)
+#6 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#12 {main}
+CRITICAL - 2024-06-08 21:08:47 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `Usuario` = :Usuario:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', [...], null, 'usuario')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', [...], [...])
+ 6 APPPATH\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 21:08:56 --> Controlador Contra:dani123
+ERROR - 2024-06-08 21:08:56 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', Array, NULL, 'usuario')
+#6 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', Array, Array)
+#7 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', Array, NULL, 'usuario')
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', Array, Array)
+#6 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#12 {main}
+CRITICAL - 2024-06-08 21:08:56 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `Usuario` = :Usuario:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', [...], null, 'usuario')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', [...], [...])
+ 6 APPPATH\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 21:08:57 --> Controlador Contra:dani123
+ERROR - 2024-06-08 21:08:57 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', Array, NULL, 'usuario')
+#6 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', Array, Array)
+#7 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', Array, NULL, 'usuario')
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', Array, Array)
+#6 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#12 {main}
+CRITICAL - 2024-06-08 21:08:57 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `Usuario` = :Usuario:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', [...], null, 'usuario')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', [...], [...])
+ 6 APPPATH\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 21:08:57 --> Controlador Contra:dani123
+ERROR - 2024-06-08 21:08:57 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', Array, NULL, 'usuario')
+#6 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', Array, Array)
+#7 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', Array, NULL, 'usuario')
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', Array, Array)
+#6 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#12 {main}
+CRITICAL - 2024-06-08 21:08:57 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `Usuario` = :Usuario:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', [...], null, 'usuario')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', [...], [...])
+ 6 APPPATH\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 21:08:57 --> Controlador Contra:dani123
+ERROR - 2024-06-08 21:08:57 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', Array, NULL, 'usuario')
+#6 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', Array, Array)
+#7 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', Array, NULL, 'usuario')
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', Array, Array)
+#6 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#12 {main}
+CRITICAL - 2024-06-08 21:08:57 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `Usuario` = :Usuario:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', [...], null, 'usuario')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', [...], [...])
+ 6 APPPATH\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 21:08:57 --> Controlador Contra:dani123
+ERROR - 2024-06-08 21:08:57 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', Array, NULL, 'usuario')
+#6 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', Array, Array)
+#7 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', Array, NULL, 'usuario')
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', Array, Array)
+#6 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#12 {main}
+CRITICAL - 2024-06-08 21:08:57 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `Usuario` = :Usuario:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', [...], null, 'usuario')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', [...], [...])
+ 6 APPPATH\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 21:08:57 --> Controlador Contra:dani123
+ERROR - 2024-06-08 21:08:57 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'appweb', 3306, '', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', Array, NULL, 'usuario')
+#6 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', Array, Array)
+#7 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\tpFinal\appweb\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\tpFinal\appweb\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\tpFinal\appweb\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', Array, NULL, 'usuario')
+#5 C:\tpFinal\appweb\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', Array, Array)
+#6 C:\tpFinal\appweb\app\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#8 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#12 {main}
+CRITICAL - 2024-06-08 21:08:57 --> Unable to connect to the database.
+Main connection [MySQLi]: The server requested authentication method unknown to the client [auth_gssapi_client]
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `Usuario` = :Usuario:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('a', 'Usuario', [...], null, 'usuario')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'a', [...], [...])
+ 6 APPPATH\Controllers\Home.php(59): CodeIgniter\Validation\Validation->run()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 22:02:19 --> Controlador Contra:dani123
+INFO - 2024-06-08 22:02:27 --> SELECT Contrasena FROM `usuario` WHERE Email='asdasdas';
+INFO - 2024-06-08 22:02:43 --> SELECT Contrasena FROM `usuario` WHERE Email='abrahamdaniel346@gmail.com';
+INFO - 2024-06-08 22:02:43 --> Fecha registro: 2024-07-08
+INFO - 2024-06-08 22:02:43 --> Fecha de hoy: 2024-06-08
+ERROR - 2024-06-08 22:02:46 --> mysqli_sql_exception: Table 'appweb.biblioteca' doesn't exist in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM `...', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `...')
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `...')
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(159): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(329): App\Models\HomeModel->consultar_pelicula('0')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->select_pelicula()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+CRITICAL - 2024-06-08 22:02:46 --> Table 'appweb.biblioteca' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM `biblioteca` WHERE Usuario=\'0\';', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `biblioteca` WHERE Usuario=\'0\';')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `biblioteca` WHERE Usuario=\'0\';')
+ 4 APPPATH\Models\HomeModel.php(159): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `biblioteca` WHERE Usuario=\'0\';')
+ 5 APPPATH\Controllers\Home.php(329): App\Models\HomeModel->consultar_pelicula('0')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->select_pelicula()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 22:03:16 --> PelisPlus, Cuevana: 783039 user: 0
+ERROR - 2024-06-08 22:03:16 --> mysqli_sql_exception: Table 'appweb.biblioteca' doesn't exist in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(148): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(320): App\Models\HomeModel->agregar_pelicula('783039', '0')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_pelicula()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+CRITICAL - 2024-06-08 22:03:16 --> Table 'appweb.biblioteca' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'783039\', \'0\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'783039\', \'0\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'783039\', \'0\');')
+ 4 APPPATH\Models\HomeModel.php(148): CodeIgniter\Database\BaseConnection->query('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'783039\', \'0\');')
+ 5 APPPATH\Controllers\Home.php(320): App\Models\HomeModel->agregar_pelicula('783039', '0')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_pelicula()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 22:03:18 --> PelisPlus, Cuevana: 783039 user: 0
+ERROR - 2024-06-08 22:03:18 --> mysqli_sql_exception: Table 'appweb.biblioteca' doesn't exist in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(148): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(320): App\Models\HomeModel->agregar_pelicula('783039', '0')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_pelicula()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+CRITICAL - 2024-06-08 22:03:18 --> Table 'appweb.biblioteca' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'783039\', \'0\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'783039\', \'0\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'783039\', \'0\');')
+ 4 APPPATH\Models\HomeModel.php(148): CodeIgniter\Database\BaseConnection->query('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'783039\', \'0\');')
+ 5 APPPATH\Controllers\Home.php(320): App\Models\HomeModel->agregar_pelicula('783039', '0')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_pelicula()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 22:03:18 --> PelisPlus, Cuevana: 783039 user: 0
+ERROR - 2024-06-08 22:03:18 --> mysqli_sql_exception: Table 'appweb.biblioteca' doesn't exist in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(148): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(320): App\Models\HomeModel->agregar_pelicula('783039', '0')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_pelicula()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+CRITICAL - 2024-06-08 22:03:18 --> Table 'appweb.biblioteca' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'783039\', \'0\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'783039\', \'0\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'783039\', \'0\');')
+ 4 APPPATH\Models\HomeModel.php(148): CodeIgniter\Database\BaseConnection->query('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'783039\', \'0\');')
+ 5 APPPATH\Controllers\Home.php(320): App\Models\HomeModel->agregar_pelicula('783039', '0')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_pelicula()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 22:04:58 --> PelisPlus, Cuevana: 783039 user: 0
+INFO - 2024-06-08 22:05:01 --> PelisPlus, Cuevana: 783039 user: 0
+ERROR - 2024-06-08 22:05:01 --> mysqli_sql_exception: Duplicate entry '783039' for key 'biblioteca.PRIMARY' in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(148): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(320): App\Models\HomeModel->agregar_pelicula('783039', '0')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_pelicula()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+CRITICAL - 2024-06-08 22:05:01 --> Duplicate entry '783039' for key 'biblioteca.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'783039\', \'0\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'783039\', \'0\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'783039\', \'0\');')
+ 4 APPPATH\Models\HomeModel.php(148): CodeIgniter\Database\BaseConnection->query('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'783039\', \'0\');')
+ 5 APPPATH\Controllers\Home.php(320): App\Models\HomeModel->agregar_pelicula('783039', '0')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_pelicula()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 22:05:04 --> PelisPlus, Cuevana: 586621 user: 0
+INFO - 2024-06-08 22:05:15 --> PelisPlus, Cuevana: 586621 user: 0
+ERROR - 2024-06-08 22:05:15 --> mysqli_sql_exception: Duplicate entry '586621' for key 'biblioteca.PRIMARY' in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(148): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(320): App\Models\HomeModel->agregar_pelicula('586621', '0')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_pelicula()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+CRITICAL - 2024-06-08 22:05:15 --> Duplicate entry '586621' for key 'biblioteca.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'586621\', \'0\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'586621\', \'0\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'586621\', \'0\');')
+ 4 APPPATH\Models\HomeModel.php(148): CodeIgniter\Database\BaseConnection->query('INSERT INTO `biblioteca`(`Pelicula`, `Usuario`) VALUES (\'586621\', \'0\');')
+ 5 APPPATH\Controllers\Home.php(320): App\Models\HomeModel->agregar_pelicula('586621', '0')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_pelicula()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 22:05:37 --> PelisPlus, Cuevana: 561966 user: 0
+INFO - 2024-06-08 22:10:53 --> Controlador Contra:123
+INFO - 2024-06-08 22:10:59 --> Controlador Contra:123
+INFO - 2024-06-08 22:11:44 --> SELECT Contrasena FROM `usuario` WHERE Email='daniexcool5@gmail.com';
+INFO - 2024-06-08 22:12:56 --> Controlador Contra:123
+INFO - 2024-06-08 22:13:49 --> Controlador Contra:123
+INFO - 2024-06-08 22:14:02 --> Controlador Contra:123
+INFO - 2024-06-08 22:15:05 --> Controlador Contra:123
+INFO - 2024-06-08 22:18:06 --> Controlador Contra:123
+INFO - 2024-06-08 22:21:29 --> Controlador Contra:dani123
+INFO - 2024-06-08 22:25:30 --> Controlador Contra:dani123
+INFO - 2024-06-08 22:25:40 --> Controlador Contra:dani123
+INFO - 2024-06-08 22:31:09 --> Controlador Contra:dani123
+ERROR - 2024-06-08 22:31:09 --> mysqli_sql_exception: Duplicate entry '0' for key 'usuario.PRIMARY' in C:\tpFinal\appweb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\tpFinal\appweb\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\tpFinal\appweb\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\tpFinal\appweb\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\tpFinal\appweb\app\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 C:\tpFinal\appweb\app\Controllers\Home.php(58): App\Models\HomeModel->registrar_usuario('aron123', 'daniexcool5@gma...', 'dani123', 'aron', 'aaa', 'aaa', '1', '5424454545', '2000-02-05', 'lwyE3FoUyvsr5oD...')
+#5 C:\tpFinal\appweb\system\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+#6 C:\tpFinal\appweb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\tpFinal\appweb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\tpFinal\appweb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\tpFinal\appweb\system\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appw...')
+#10 {main}
+CRITICAL - 2024-06-08 22:31:09 --> Duplicate entry '0' for key 'usuario.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aron123\', \'daniexcool5@gmail.com\', \'$2y$10$dS3GJZcCWMbdIhTBvr6nneSutVbqF4rCT08kFs6umKg2r7T8kFr8K\', \'aron\', \'aaa\', \'aaa\', \'1\', \'5424454545\', \'2000-02-05\', 0, \'lwyE3FoUyvsr5oDcJsdsH5sbHOI3seKR\', \'2024-06-08\');', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aron123\', \'daniexcool5@gmail.com\', \'$2y$10$dS3GJZcCWMbdIhTBvr6nneSutVbqF4rCT08kFs6umKg2r7T8kFr8K\', \'aron\', \'aaa\', \'aaa\', \'1\', \'5424454545\', \'2000-02-05\', 0, \'lwyE3FoUyvsr5oDcJsdsH5sbHOI3seKR\', \'2024-06-08\');')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aron123\', \'daniexcool5@gmail.com\', \'$2y$10$dS3GJZcCWMbdIhTBvr6nneSutVbqF4rCT08kFs6umKg2r7T8kFr8K\', \'aron\', \'aaa\', \'aaa\', \'1\', \'5424454545\', \'2000-02-05\', 0, \'lwyE3FoUyvsr5oDcJsdsH5sbHOI3seKR\', \'2024-06-08\');')
+ 4 APPPATH\Models\HomeModel.php(41): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario`(`Usuario`, `Email`, `Contrasena`, `Nombre`, `Apellido`, `Direccion`, `Genero`, `Telefono`, `Nacimiento`, `Valido`, `Token`, `FechaRegistro`) VALUES (\'aron123\', \'daniexcool5@gmail.com\', \'$2y$10$dS3GJZcCWMbdIhTBvr6nneSutVbqF4rCT08kFs6umKg2r7T8kFr8K\', \'aron\', \'aaa\', \'aaa\', \'1\', \'5424454545\', \'2000-02-05\', 0, \'lwyE3FoUyvsr5oDcJsdsH5sbHOI3seKR\', \'2024-06-08\');')
+ 5 APPPATH\Controllers\Home.php(58): App\Models\HomeModel->registrar_usuario('aron123', 'daniexcool5@gmail.com', 'dani123', 'aron', 'aaa', 'aaa', '1', '5424454545', '2000-02-05', 'lwyE3FoUyvsr5oDcJsdsH5sbHOI3seKR')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 22:37:14 --> SELECT Contrasena FROM `usuario` WHERE Email='abrahamdaniel346@gmail.com';
+INFO - 2024-06-08 22:37:14 --> Fecha registro: 2024-07-08
+INFO - 2024-06-08 22:37:14 --> Fecha de hoy: 2024-06-08
+INFO - 2024-06-08 22:38:17 --> Controlador Contra:dani123
+INFO - 2024-06-08 22:38:33 --> Controlador Contra:dani123
+INFO - 2024-06-08 22:43:50 --> Controlador Contra:dani123
+INFO - 2024-06-08 22:46:58 --> Controlador Contra:123
+INFO - 2024-06-08 22:51:26 --> Controlador Contra:dani123
+INFO - 2024-06-08 22:52:18 --> Controlador Contra:dani123
+INFO - 2024-06-08 22:55:20 --> Controlador Contra:1234
+CRITICAL - 2024-06-08 22:55:20 --> Array to string conversion
+in APPPATH\Controllers\Home.php on line 68.
+ 1 APPPATH\Controllers\Home.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\tpFinal\\appweb\\app\\Controllers\\Home.php', 68)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 23:14:39 --> Controlador Contra:123
+CRITICAL - 2024-06-08 23:14:39 --> "valid_usuario" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 329.
+ 1 SYSTEMPATH\Validation\Validation.php(329): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('valid_usuario')
+ 2 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'aron123', [...], [...])
+ 3 APPPATH\Controllers\Home.php(58): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 23:24:04 --> SELECT Contrasena FROM `usuario` WHERE Email='asdasd';
+INFO - 2024-06-08 23:33:32 --> Controlador Contra:1234
+CRITICAL - 2024-06-08 23:33:32 --> "valid_usuario" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 329.
+ 1 SYSTEMPATH\Validation\Validation.php(329): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('valid_usuario')
+ 2 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', '123123asdasd', [...], [...])
+ 3 APPPATH\Controllers\Home.php(58): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 23:34:09 --> Controlador Contra:1234
+CRITICAL - 2024-06-08 23:34:09 --> "valid_usuario" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 329.
+ 1 SYSTEMPATH\Validation\Validation.php(329): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('valid_usuario')
+ 2 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', '123123asdasd', [...], [...])
+ 3 APPPATH\Controllers\Home.php(58): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 23:34:20 --> Controlador Contra:dani123
+CRITICAL - 2024-06-08 23:34:20 --> "valid_usuario" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 329.
+ 1 SYSTEMPATH\Validation\Validation.php(329): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('valid_usuario')
+ 2 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', '123123asdasd', [...], [...])
+ 3 APPPATH\Controllers\Home.php(58): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 23:34:28 --> Controlador Contra:dani123
+CRITICAL - 2024-06-08 23:34:28 --> "valid_usuario" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 329.
+ 1 SYSTEMPATH\Validation\Validation.php(329): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('valid_usuario')
+ 2 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani123', [...], [...])
+ 3 APPPATH\Controllers\Home.php(58): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 23:34:54 --> Controlador Contra:dani123
+CRITICAL - 2024-06-08 23:34:54 --> "valid_usuario" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 329.
+ 1 SYSTEMPATH\Validation\Validation.php(329): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('valid_usuario')
+ 2 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'dani123', [...], [...])
+ 3 APPPATH\Controllers\Home.php(58): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->insert_usuario()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\tpFinal\\appweb\\public\\index.php')
+INFO - 2024-06-08 23:36:10 --> Controlador Contra:dani123
+INFO - 2024-06-08 23:36:18 --> SELECT Contrasena FROM `usuario` WHERE Email='abrahamdaniel346@gmail.com';
+INFO - 2024-06-08 23:36:18 --> Fecha registro: 2024-07-08
+INFO - 2024-06-08 23:36:18 --> Fecha de hoy: 2024-06-08

@@ -37,8 +37,12 @@ $routes->get('/homepage', 'Home::homepage');
 //Controlar existencia de correo escrito en vista register
 $routes->post('email/check', 'Home::checkEmail');
 
+//validar usuario
+$routes->post('home/validar_usuario', 'Home::validar_usuario');
+
 //Registrar usuario
 $routes->post('home/insert_usuario', 'Home::insert_usuario');
+
 
 //Validar correo electronico
 $routes->post('home/validar_email', 'Home::validar_email');

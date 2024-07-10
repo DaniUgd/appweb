@@ -28,7 +28,7 @@ class Database extends Config
         'DSN'      => '',
         'hostname' => 'localhost',
         'username' => 'root',
-        'password' => '',
+        'password' => 'admin',
         'database' => 'appweb',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
@@ -41,7 +41,7 @@ class Database extends Config
         'compress' => false,
         'strictOn' => false,
         'failover' => [],
-        'port'     => 3306,
+        'port'     => 3308,
     ];
 
     /**
@@ -52,7 +52,7 @@ class Database extends Config
         'DSN'         => '',
         'hostname'    => '127.0.0.1',
         'username'    => '',
-        'password'    => '',
+        'password'    => 'admin',
         'database'    => ':memory:',
         'DBDriver'    => 'SQLite3',
         'DBPrefix'    => 'db_',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
@@ -65,7 +65,7 @@ class Database extends Config
         'compress'    => false,
         'strictOn'    => false,
         'failover'    => [],
-        'port'        => 3306,
+        'port'        => 3308,
         'foreignKeys' => true,
         'busyTimeout' => 1000,
     ];
