@@ -40,7 +40,7 @@ class Home extends BaseController{
         $telefono = $this->request->getPost('telefono');
         $nacimiento = $this->request->getPost('nacimiento');
         $token = $this->request->getPost('token');
-        
+    
         //Validacion usuario
         $validation = service('validation');
         $validation->setRules([
